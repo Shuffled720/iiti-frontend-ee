@@ -21,7 +21,7 @@ export default function Events() {
   const [isError, setIsError] = useState([]);
   useEffect(() => {
     axios
-      .get("https://rupal17.pythonanywhere.com/api/events/read")
+      .get("https://rupal17.pythonanywhere.com/api/events/read", { mode: 'cors' })
       .then((response) => setEvent(response.data))
       .catch((error) => setIsError(error.message));
     if (!isError) {
@@ -30,7 +30,7 @@ export default function Events() {
   }, [isError]);
   useEffect(() => {
     axios
-      .get("https://rupal17.pythonanywhere.com/api/news/read")
+      .get("https://rupal17.pythonanywhere.com/api/news/read", { mode: 'cors' })
       .then((response) => setNewsitem(response.data))
       .catch((error) => setIsError(error.message));
     if (!isError) {
@@ -39,7 +39,7 @@ export default function Events() {
   }, [isError]);
   useEffect(() => {
     axios
-      .get("https://rupal17.pythonanywhere.com/api/announcement/read")
+      .get("https://rupal17.pythonanywhere.com/api/announcement/read", { mode: 'cors' })
       .then((response) => setAnnounce(response.data))
       .catch((error) => setIsError(error.message));
     if (!isError) {

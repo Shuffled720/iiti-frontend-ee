@@ -10,7 +10,7 @@ export default function Vlsi() {
   const [isError, setIsError] = useState([]);
   useEffect(() => {
     axios
-      .get("https://rupal17.pythonanywhere.com/api/research/vlsi")
+      .get("https://rupal17.pythonanywhere.com/api/research/vlsi", { mode: 'cors' })
       .then((response) => setResearch(response.data))
       .catch((error) => setIsError(error.message));
     if (!isError) {
