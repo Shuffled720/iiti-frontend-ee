@@ -18,7 +18,7 @@ export default function Signal() {
     if (!isError) {
       setResearch("Not Available");
     }
-  }, []);
+  }, [isError]);
   console.log(research.people);
   const a = research.people;
   const b = research.research;
