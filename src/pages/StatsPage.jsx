@@ -48,14 +48,14 @@ export default function StatsPage() {
           <center>
             {param.params === "Faculty" ? (
               <>
-                <img width="50%" src="/Images/faculty_number.jpg" />
+                <img alt="" width="50%" src="/Images/faculty_number.jpg" />
               </>
             ) : (
               <></>
             )}
             {param.params === "Students" ? (
               <>
-                <img width="50%" src="/Images/degree_awarded.jpg" />
+                <img alt="" width="50%" src="/Images/degree_awarded.jpg" />
               </>
             ) : (
               <></>
@@ -63,7 +63,7 @@ export default function StatsPage() {
             {param.params === "Publications" ? (
               <>
                 <center>
-                  <img width="50%" src="/Images/journals.jpg" />
+                  <img alt="" width="50%" src="/Images/journals.jpg" />
                 </center>
               </>
             ) : (
@@ -77,15 +77,15 @@ export default function StatsPage() {
                   justifyContent: "center",
                 }}
               >
-                <img width="40%" src="/Images/ug_placements.jpg" />
-                <img width="40%" src="/Images/pg_placements.jpg" />
+                <img alt="" width="40%" src="/Images/ug_placements.jpg" />
+                <img alt="" width="40%" src="/Images/pg_placements.jpg" />
               </Box>
             ) : (
               <></>
             )}
             {param.params === "Patents" ? (
               <>
-                <img width="50%" src="/Images/patent_data.png" />
+                <img alt="" width="50%" src="/Images/patent_data.png" />
               </>
             ) : (
               <></>
@@ -93,7 +93,7 @@ export default function StatsPage() {
             {param.params === "Projects" ? (
               <>
                 <center>
-                  <img width="50%" src="/Images/projects_number.jpg" />
+                  <img alt="" width="50%" src="/Images/projects_number.jpg" />
                 </center>
               </>
             ) : (
@@ -101,7 +101,7 @@ export default function StatsPage() {
             )}
             {param.params === "Grants" ? (
               <>
-                <img width="50%" src="/Images/project_grant.jpg" />
+                <img alt="" width="50%" src="/Images/project_grant.jpg" />
               </>
             ) : (
               <></>

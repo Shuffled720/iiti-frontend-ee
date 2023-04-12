@@ -14,7 +14,7 @@ export default function ProjectPage() {
     if (!isError) {
       setIsError("Not Available");
     }
-  }, []);
+  }, [isError]);
 
   return (
     <>
