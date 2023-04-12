@@ -60,9 +60,9 @@ const Header = () => {
   const handleClick10 = () => {
     setOpen10(!open10);
   };
-  // const handleClick11=()=>{
+  // const handleClick11 = () => {
   //   setOpen11(!open11);
-  // }
+  // };
 
   const [state, setState] = React.useState({
     top: false,
@@ -168,7 +168,7 @@ const Header = () => {
               sx={{ pl: 2 }}
               onClick={toggleDrawer(anchor, false)}
             >
-              <Link className="nav-link" to="/about">
+              <Link className="nav-link" to="/people/Staff">
                 <ListItemText primary="Staff" />
               </Link>
             </ListItemButton>
@@ -184,7 +184,7 @@ const Header = () => {
                   sx={{ pl: 4 }}
                   onClick={toggleDrawer(anchor, false)}
                 >
-                  <Link className="nav-link" to="/about">
+                  <Link className="nav-link" to="/people/PhD">
                     <ListItemText primary="2018" />
                   </Link>
                 </ListItemButton>
@@ -193,7 +193,7 @@ const Header = () => {
                   sx={{ pl: 4 }}
                   onClick={toggleDrawer(anchor, false)}
                 >
-                  <Link className="nav-link" to="/about">
+                  <Link className="nav-link" to="/people/PhD">
                     <ListItemText primary="2019" />
                   </Link>
                 </ListItemButton>
@@ -201,7 +201,7 @@ const Header = () => {
                   sx={{ pl: 4 }}
                   onClick={toggleDrawer(anchor, false)}
                 >
-                  <Link className="nav-link" to="/about">
+                  <Link className="nav-link" to="/people/PhD">
                     <ListItemText primary="2020" />
                   </Link>
                 </ListItemButton>
@@ -209,7 +209,7 @@ const Header = () => {
                   sx={{ pl: 4 }}
                   onClick={toggleDrawer(anchor, false)}
                 >
-                  <Link className="nav-link" to="/about">
+                  <Link className="nav-link" to="/people/PhD">
                     <ListItemText primary="2021" />
                   </Link>
                 </ListItemButton>
@@ -217,7 +217,7 @@ const Header = () => {
                   sx={{ pl: 4 }}
                   onClick={toggleDrawer(anchor, false)}
                 >
-                  <Link className="nav-link" to="/about">
+                  <Link className="nav-link" to="/people/PhD">
                     <ListItemText primary="2022" />
                   </Link>
                 </ListItemButton>
@@ -303,7 +303,7 @@ const Header = () => {
                   sx={{ pl: 4 }}
                   onClick={toggleDrawer(anchor, false)}
                 >
-                  <Link className="nav-link" to="#">
+                  <Link className="nav-link" to="/people/Alumni/2014">
                     <ListItemText primary="2014" />
                   </Link>
                 </ListItemButton>
@@ -311,24 +311,32 @@ const Header = () => {
                   sx={{ pl: 4 }}
                   onClick={toggleDrawer(anchor, false)}
                 >
-                  <Link className="nav-link" to="#">
+                  <Link className="nav-link" to="/people/Alumni/2015">
+                    <ListItemText primary="2015" />
+                  </Link>
+                </ListItemButton>
+                <ListItemButton
+                  sx={{ pl: 4 }}
+                  onClick={toggleDrawer(anchor, false)}
+                >
+                  <Link className="nav-link" to="/people/Alumni/2016">
+                    <ListItemText primary="2016" />
+                  </Link>
+                </ListItemButton>
+                <ListItemButton
+                  sx={{ pl: 4 }}
+                  onClick={toggleDrawer(anchor, false)}
+                >
+                  <Link className="nav-link" to="/people/Alumni/2017">
+                    <ListItemText primary="2017" />
+                  </Link>
+                </ListItemButton>
+                <ListItemButton
+                  sx={{ pl: 4 }}
+                  onClick={toggleDrawer(anchor, false)}
+                >
+                  <Link className="nav-link" to="/people/Alumni/2018">
                     <ListItemText primary="2018" />
-                  </Link>
-                </ListItemButton>
-                <ListItemButton
-                  sx={{ pl: 4 }}
-                  onClick={toggleDrawer(anchor, false)}
-                >
-                  <Link className="nav-link" to="#">
-                    <ListItemText primary="2019" />
-                  </Link>
-                </ListItemButton>
-                <ListItemButton
-                  sx={{ pl: 4 }}
-                  onClick={toggleDrawer(anchor, false)}
-                >
-                  <Link className="nav-link" to="#">
-                    <ListItemText primary="2020" />
                   </Link>
                 </ListItemButton>
               </List>
@@ -360,7 +368,7 @@ const Header = () => {
               </Link>
             </ListItemButton>
             {/* ////////////////////////////////////////////////////////////////////// */}
-            <ListItemButton sx={{ pl: 4 }} onClick={handleClick10}>
+            <ListItemButton onClick={handleClick10} sx={{ pl: 4 }}>
               <ListItemText primary="Recent Publications" />
               {open10 ? <ExpandLess /> : <ExpandMore />}
             </ListItemButton>
@@ -426,30 +434,39 @@ const Header = () => {
                 <ListItemText primary="Programs" />
               </Link>
             </ListItemButton>
-            <ListItemButton
-              sx={{ pl: 4 }}
-              onClick={toggleDrawer(anchor, false)}
-            >
-              <Link className="nav-link" to="/admministration">
-                <ListItemText primary="Courses" />
-              </Link>
+
+            <ListItemButton sx={{ pl: 4 }}
+              onClick={handleClick7}>
+              <ListItemText primary="Courses" />
+              {open7 ? <ExpandLess /> : <ExpandMore />}
             </ListItemButton>
-            <ListItemButton
-              sx={{ pl: 4 }}
-              onClick={toggleDrawer(anchor, false)}
-            >
-              <Link className="nav-link" to="/contact">
-                <ListItemText primary="Scholarships" />
-              </Link>
-            </ListItemButton>
-            <ListItemButton
-              sx={{ pl: 4 }}
-              onClick={toggleDrawer(anchor, false)}
-            >
-              <Link className="nav-link" to="/gallery">
-                <ListItemText primary="Awards and Recognitions" />
-              </Link>
-            </ListItemButton>
+            <Collapse in={open7} timeout="auto" unmountOnExit>
+              <List component="div">
+                <ListItemButton
+                  sx={{ pl: 4 }}
+                  onClick={toggleDrawer(anchor, false)}
+                >
+                  <Link className="nav-link" to="/courses/BTech">
+                    <ListItemText primary="BTech" />
+                  </Link>
+                </ListItemButton>
+
+                <ListItemButton
+                  sx={{ pl: 4 }}
+                  onClick={toggleDrawer(anchor, false)}
+                >
+                  <Link className="nav-link" to="/courses/MTech">
+                    <ListItemText primary="MTech" />
+                  </Link>
+                </ListItemButton>
+
+
+
+              </List>
+            </Collapse>
+            {/* //////////////////////////////////////////// */}
+            {/* //////////////////////////////////////////// */}
+
           </List>
         </Collapse>
 

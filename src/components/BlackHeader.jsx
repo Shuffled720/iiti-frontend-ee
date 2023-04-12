@@ -435,30 +435,39 @@ const BlackHeader = () => {
                 <ListItemText primary="Programs" />
               </Link>
             </ListItemButton>
-            <ListItemButton
-              sx={{ pl: 4 }}
-              onClick={toggleDrawer(anchor, false)}
-            >
-              <Link className="nav-link" to="/admministration">
-                <ListItemText primary="Courses" />
-              </Link>
+
+            <ListItemButton sx={{ pl: 4 }}
+              onClick={handleClick7}>
+              <ListItemText primary="Courses" />
+              {open7 ? <ExpandLess /> : <ExpandMore />}
             </ListItemButton>
-            <ListItemButton
-              sx={{ pl: 4 }}
-              onClick={toggleDrawer(anchor, false)}
-            >
-              <Link className="nav-link" to="/contact">
-                <ListItemText primary="Scholarships" />
-              </Link>
-            </ListItemButton>
-            <ListItemButton
-              sx={{ pl: 4 }}
-              onClick={toggleDrawer(anchor, false)}
-            >
-              <Link className="nav-link" to="/gallery">
-                <ListItemText primary="Awards and Recognitions" />
-              </Link>
-            </ListItemButton>
+            <Collapse in={open7} timeout="auto" unmountOnExit>
+              <List component="div">
+                <ListItemButton
+                  sx={{ pl: 4 }}
+                  onClick={toggleDrawer(anchor, false)}
+                >
+                  <Link className="nav-link" to="/courses/BTech">
+                    <ListItemText primary="BTech" />
+                  </Link>
+                </ListItemButton>
+
+                <ListItemButton
+                  sx={{ pl: 4 }}
+                  onClick={toggleDrawer(anchor, false)}
+                >
+                  <Link className="nav-link" to="/courses/MTech">
+                    <ListItemText primary="MTech" />
+                  </Link>
+                </ListItemButton>
+
+
+
+              </List>
+            </Collapse>
+            {/* //////////////////////////////////////////// */}
+            {/* //////////////////////////////////////////// */}
+
           </List>
         </Collapse>
 
