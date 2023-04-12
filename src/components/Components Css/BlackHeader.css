@@ -1,0 +1,113 @@
+.black-naviiii {
+  background: none;
+  font-size: 0.9rem;
+  text-decoration: none;
+  position: relative;
+  color: #fff;
+  width: 100%;
+}
+
+a:hover {
+  color: #000;
+}
+
+.black-menu-wrapper {
+  padding: 1%;
+  background-color: #105297;
+}
+
+.black-logo-text {
+  padding: 0% 5%;
+  display: flex;
+  align-items: center;
+}
+
+.black-nav-links {
+  display: flex;
+  justify-content: space-around;
+}
+
+.black-menu {
+  position: relative;
+  width: 10%;
+  padding: 0% !important;
+  text-align: center;
+  border: 2px solid #105297;
+}
+
+.black-menu:hover {
+  border-bottom: 2px solid #ffffff;
+}
+
+/* .black-menu:focus .ani-menu,
+.black-menu:focus-within .ani-menu, */
+.black-menu:hover .black-ani-menu {
+  visibility: visible;
+  opacity: 1;
+  z-index: 2;
+  transform: translateY(0);
+  transition-delay: 0s, 0s, 0.5s;
+}
+.black-ani-menu {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+  color: #000;
+  background-color: #c6c6c600;
+  transform: translateY(-3em);
+  transition: all 0.1s ease 0s, visibility 0.3s linear 0.3s,
+    z-index 0s linear 0.01s;
+}
+
+.black-aniani-menu {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  backdrop-filter: blur(5px);
+  background-color: #c6c6c646;
+  box-shadow: 0 30px 40px rgba(0, 0, 0, 0.2);
+  left: 100%;
+  top: 0%;
+  width: 100%;
+  transform: translateY(-3em);
+  z-index: 99;
+  transition: all 0.3s ease 0s, visibility 0.3s linear 0.3s;
+}
+
+.black-aniani-menu-trigger {
+  position: relative;
+}
+
+.black-aniani-menu-trigger:hover .black-aniani-menu {
+  visibility: visible;
+  opacity: 1;
+  z-index: 2;
+  transform: translateY(0);
+  transition-delay: 0s, 0s, 0.5s;
+}
+
+.black-ani-menu::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(10px);
+  z-index: -1;
+}
+
+.black-aniani-menu::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(10px);
+  z-index: -1;
+}
+.black-link-button {
+  padding: 5%;
+}
