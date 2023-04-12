@@ -12,7 +12,7 @@ export default function Common_Cards(props) {
   useEffect(() => {
     axios
       .get(
-        `https://rupal17.pythonanywhere.com/api/people/${props.program}/read/${props.year}`
+        `https://rupal17.pythonanywhere.com/api/people/${props.program}/read/${props.year}`, { mode: 'cors' }
       )
       .then((response) => setData(response.data))
       .catch((error) => setIsError(error.message));
@@ -37,7 +37,7 @@ export default function Common_Cards(props) {
                 {item.image ? (
                   <CardMedia
                     sx={{ height: "150px" }}
-                    image={`http://localhost:8000${item.image}`}
+                    image={`/home/rupal17/iiti-backend-website/ee${item.image}`}
                     title="Faculty"
                     loading="lazy"
                   />
