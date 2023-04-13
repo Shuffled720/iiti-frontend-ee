@@ -38,7 +38,7 @@ export default function Common_Cards(props) {
                   <CardMedia
                     sx={{ height: "150px" }}
                     image={`/home/rupal17/iiti-backend-website/ee${item.image}`}
-                    title="Faculty"
+                    // title="Faculty"
                     loading="lazy"
                   />
                 ) : (
@@ -46,7 +46,7 @@ export default function Common_Cards(props) {
                     <CardMedia
                       sx={{ height: 150 }}
                       image="/Images/profile_placeholder.jpg"
-                      title="Faculty"
+                      // title="Faculty"
                       loading="lazy"
                     />
                   </>
