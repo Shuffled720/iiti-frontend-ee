@@ -60,7 +60,6 @@ const FooterWithCounter = () => {
                     </VisibilitySensor>
                   )}
                 </CountUp>
-                +
               </Typography>
               <Typography color="secondary">Faculty</Typography>
             </Box>
@@ -79,7 +78,7 @@ const FooterWithCounter = () => {
                 />
               </Link>
               <Typography color="secondary">
-                <CountUp end={1115} duration={2}>
+                <CountUp end={515} duration={2}>
                   {({ countUpRef, start }) => (
                     <VisibilitySensor onChange={start} delayedCall>
                       <span ref={countUpRef} />
@@ -216,9 +215,9 @@ const FooterWithCounter = () => {
                     </VisibilitySensor>
                   )}
                 </CountUp>
-                .7 Cr
+                .7+ Cr
               </Typography>
-              <Typography color="secondary">Project Grant</Typography>
+              <Typography color="secondary">Project Grants</Typography>
             </Box>
           </Box>
         </motion.div>
@@ -262,7 +261,6 @@ const FooterWithCounter = () => {
                       </VisibilitySensor>
                     )}
                   </CountUp>
-                  +
                 </Typography>
                 <Typography color="secondary">Faculty</Typography>
               </Box>
@@ -282,7 +280,7 @@ const FooterWithCounter = () => {
                   />
                 </Link>
                 <Typography color="secondary">
-                  <CountUp end={1115} duration={2}>
+                  <CountUp end={515} duration={2}>
                     {({ countUpRef, start }) => (
                       <VisibilitySensor onChange={start} delayedCall>
                         <span ref={countUpRef} />
@@ -424,9 +422,9 @@ const FooterWithCounter = () => {
                       </VisibilitySensor>
                     )}
                   </CountUp>
-                  .7 Cr
+                  .7+ Cr
                 </Typography>
-                <Typography color="secondary">Project Grant</Typography>
+                <Typography color="secondary">Project Grants</Typography>
               </Box>
               {/* <Box
                 sx={{

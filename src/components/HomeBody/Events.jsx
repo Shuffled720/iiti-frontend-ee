@@ -6,7 +6,8 @@ import { Box } from "@mui/system";
 import axios from "axios";
 import { useEffect } from "react";
 import { Container } from "@mui/system";
-
+import NewspaperIcon from "@mui/icons-material/Newspaper";
+import CampaignIcon from "@mui/icons-material/Campaign";
 export default function Events() {
   const [news, setNews] = useState(1);
   const newsHandler = () => {
@@ -21,7 +22,9 @@ export default function Events() {
   const [isError, setIsError] = useState([]);
   useEffect(() => {
     axios
-      .get("https://rupal17.pythonanywhere.com/api/events/read", { mode: 'cors' })
+      .get("https://rupal17.pythonanywhere.com/api/events/read", {
+        mode: "cors",
+      })
       .then((response) => setEvent(response.data))
       .catch((error) => setIsError(error.message));
     if (!isError) {
@@ -30,7 +33,7 @@ export default function Events() {
   }, [isError]);
   useEffect(() => {
     axios
-      .get("https://rupal17.pythonanywhere.com/api/news/read", { mode: 'cors' })
+      .get("https://rupal17.pythonanywhere.com/api/news/read", { mode: "cors" })
       .then((response) => setNewsitem(response.data))
       .catch((error) => setIsError(error.message));
     if (!isError) {
@@ -39,7 +42,9 @@ export default function Events() {
   }, [isError]);
   useEffect(() => {
     axios
-      .get("https://rupal17.pythonanywhere.com/api/announcement/read", { mode: 'cors' })
+      .get("https://rupal17.pythonanywhere.com/api/announcement/read", {
+        mode: "cors",
+      })
       .then((response) => setAnnounce(response.data))
       .catch((error) => setIsError(error.message));
     if (!isError) {
@@ -54,36 +59,64 @@ export default function Events() {
         <div className="buttons">
           <Grid
             container
-            justifyContent="Left"
+            justifyContent="left"
             direction="row"
             alignItems="center"
-            spacing={2}
+            // sx={{backgroundImage:"linear-gradient(to top bottom, red, white)"}}
+            // spacing={2}
           >
-            <Grid item>
-              <Button
-                disableRipple
-                variant={news === 1 ? "contained" : "outlined"}
-                sx={{ borderRadius: 0 }}
-                color="primary"
+            <Grid
+              item
+              marginX={1}
+              borderTop={news === 1 ? 3 : 0}
+              borderColor={"primary.main"}
+              xs={1.5}
+              color={news === 1 ? "primary.main" : "black"}
+              backgroundColor={news === 1 ? "primary." : "white"}
+              sx={{
+                boxShadow: news === 1 ? "0px 0px 0.5px 0px #010101" : "none",
+              }}
+
+              // background='linear-gradient(to top bottom, red, white)'
+            >
+              <button
                 className="news"
                 onClick={newsHandler}
+                style={{ textAlign: "center", width: "100%" }}
               >
+                <NewspaperIcon
+                // color="primary"
+                // sx={{ "&:hover": { color: "primary.main" } }}
+                />
+                {/* <NewspaperIcon color="#fff" /> */}
+                <br />
+                {/* <Typography sx={{color: news===1?"primary.main":"black" } }> */}
                 News
-              </Button>
+                {/* </Typography> */}
+              </button>
             </Grid>
-            <Grid item>
-              <Button
-                disableElevation
-                disableRipple
-                variant={news === 0 ? "contained" : "outlined"}
-                sx={{
-                  borderRadius: 0,
-                }}
-                color="primary"
+            <Grid
+              item
+              marginX={1}
+              borderTop={news === 1 ? 0 : 3}
+              borderColor={"primary.main"}
+              xs={1.5}
+              color={news === 1 ? "black" : "primary.main"}
+              backgroundColor={news === 1 ? "primary.mainGradient" : "white"}
+              sx={{
+                boxShadow: news === 0 ? "0px 0px 0.5px 0px #010101" : "none",
+                width: "100%",
+              }}
+            >
+              <button
+                className="news"
                 onClick={announcementHandler}
+                style={{ textAlign: "center", width: "100%" }}
               >
-                Announcement
-              </Button>
+                <CampaignIcon />
+                <br />
+                Announcements
+              </button>
             </Grid>
           </Grid>
           <Divider
