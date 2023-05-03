@@ -7,12 +7,12 @@ import Typography from "@mui/material/Typography";
 
 import navs from "../navdata";
 import MobileHeader from "./MobileHeader";
-
+import NewMobileHeader from "./NewMobileHeader";
 const BlackHeader = () => {
-  
   return (
     <>
-      <MobileHeader />
+      {/* <MobileHeader /> */}
+      <NewMobileHeader />
       {/* /////////////////////////////////////////////////// */}
       <Box sx={{ display: { xs: "none", md: "block" } }}>
         <div className="black-navdiv">

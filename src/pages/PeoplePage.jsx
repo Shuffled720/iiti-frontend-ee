@@ -13,14 +13,6 @@ export default function BtechPage(props) {
   console.log(params.program);
   console.log(params.year);
    const [news, setNews] = React.useState(1);
-   const newsHandler = () => {
-     setNews(1);
-   };
-   const announcementHandler = () => {
-     setNews(0);
-   };
-   const [event, setEvent] = React.useState([]);
-   const [announce, setAnnounce] = React.useState([]);
   return (
     <div>
       <Container sx={{ py: 2 }}>
@@ -242,6 +234,7 @@ export default function BtechPage(props) {
 
         {params.program === "Alumni" ? (
           <>
+            <br/>
             <Grid
               container
               justifyContent="left"
@@ -266,59 +259,131 @@ export default function BtechPage(props) {
               >
                 <button
                   className="news"
-                  onClick={newsHandler}
-                  style={{ textAlign: "center", width: "100%" }}
+                  onClick={() => setNews(1)}
+                  style={{
+                    textAlign: "center",
+                    width: "100%",
+                    padding: "20px",
+                  }}
                 >
-                  <NewspaperIcon
-                  // color="primary"
-                  // sx={{ "&:hover": { color: "primary.main" } }}
-                  />
-                  {/* <NewspaperIcon color="#fff" /> */}
-                  <br />
                   {/* <Typography sx={{color: news===1?"primary.main":"black" } }> */}
-                  News
+                  B.Tech
                   {/* </Typography> */}
                 </button>
               </Grid>
               <Grid
                 item
                 marginX={1}
-                borderTop={news === 1 ? 0 : 3}
+                borderTop={news === 2 ? 3 : 0}
                 borderColor={"primary.main"}
                 xs={1.5}
-                color={news === 1 ? "black" : "primary.main"}
-                backgroundColor={news === 1 ? "primary.mainGradient" : "white"}
+                color={news === 2 ? "primary.main" : "black"}
+                backgroundColor={news === 2 ? "primary.mainGradient" : "white"}
                 sx={{
-                  boxShadow: news === 0 ? "0px 0px 0.5px 0px #010101" : "none",
+                  boxShadow: news === 2 ? "0px 0px 0.5px 0px #010101" : "none",
                   width: "100%",
                 }}
               >
                 <button
-                  className="news"
-                  onClick={announcementHandler}
-                  style={{ textAlign: "center", width: "100%" }}
+                  className="mtech"
+                  onClick={() => setNews(2)}
+                  style={{
+                    textAlign: "center",
+                    width: "100%",
+                    padding: "20px",
+                  }}
                 >
-                  <CampaignIcon />
-                  <br />
-                  Announcements
+                  M.Tech
+                </button>
+              </Grid>
+              <Grid
+                item
+                marginX={1}
+                borderTop={news === 3 ? 3 : 0}
+                borderColor={"primary.main"}
+                xs={1.5}
+                color={news === 3 ? "primary.main" : "black"}
+                backgroundColor={news === 3 ? "primary." : "white"}
+                sx={{
+                  boxShadow: news === 3 ? "0px 0px 0.5px 0px #010101" : "none",
+                }}
+
+                // background='linear-gradient(to top bottom, red, white)'
+              >
+                <button
+                  className="news"
+                  onClick={() => setNews(3)}
+                  style={{
+                    textAlign: "center",
+                    width: "100%",
+                    padding: "20px",
+                  }}
+                >
+                  {/* <Typography sx={{color: news===1?"primary.main":"black" } }> */}
+                  Ph.D
+                  {/* </Typography> */}
+                </button>
+              </Grid>
+              <Grid
+                item
+                marginX={1}
+                borderTop={news === 4 ? 3 : 0}
+                borderColor={"primary.main"}
+                xs={1.5}
+                color={news === 4 ? "primary.main" : "black"}
+                backgroundColor={news === 4 ? "primary." : "white"}
+                sx={{
+                  boxShadow: news === 4 ? "0px 0px 0.5px 0px #010101" : "none",
+                }}
+
+                // background='linear-gradient(to top bottom, red, white)'
+              >
+                <button
+                  className="news"
+                  onClick={() => setNews(4)}
+                  style={{
+                    textAlign: "center",
+                    width: "100%",
+                    padding: "20px",
+                  }}
+                >
+                  {/* <Typography sx={{color: news===1?"primary.main":"black" } }> */}
+                  MS (Research)
+                  {/* </Typography> */}
                 </button>
               </Grid>
             </Grid>
             <Divider
               sx={{ bgcolor: "primary.main", borderBottomWidth: 1, opacity: 1 }}
             />
-            <Grid
-              container
-              justifyContent={"space-around"}
-              alignItems={"center"}
-              direction={"row"}
-              spacing={6}
-              sx={{ pt: 4 }}
-            >
-              <Grid item>
-                <CommonCard year={params.year} program={params.program} />
-              </Grid>
-            </Grid>
+            {news === 1 ? (
+              <>
+                <CommonCard year={params.year} program={params.program} prog="B.Tech."/>
+              </>
+            ) : (
+              <></>
+            )}
+            {news === 2 ? (
+              <>
+                <CommonCard year={params.year} program={params.program} prog="M.Tech."/>
+              </>
+            ) : (
+              <></>
+            )}
+            {news === 3 ? (
+              <>
+                <CommonCard year={params.year} program={params.program} prog="Ph.D."/>
+              </>
+            ) : (
+              <></>
+            )}
+            {news === 4 ? (
+              <>
+                <CommonCard year={params.year} program={params.program} prog="MS"/>
+              </>
+            ) : (
+              <></>
+            )}
           </>
         ) : (
           <></>
