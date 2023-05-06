@@ -42,7 +42,7 @@ const StaffCard = () => {
               </Box>
               <Box sx={{ p: 2, width: "100%" }}>
                 <Typography variant="h5" color="primary">
-                  <a target="_blank" href={`${item.link}`}>{item.name}</a>
+                  <a target="_blank" rel="noreferrer" href={`${item.link}`}>{item.name}</a>
                 </Typography>
                 <Typography variant="h7">{item.title}</Typography>
 

@@ -6,7 +6,6 @@ import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 
 import navs from "../navdata";
-import MobileHeader from "./MobileHeader";
 import NewMobileHeader from "./NewMobileHeader";
 const BlackHeader = () => {
   return (

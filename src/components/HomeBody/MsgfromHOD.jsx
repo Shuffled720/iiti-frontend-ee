@@ -1,4 +1,4 @@
-import { Typography, Box, Container } from "@mui/material";
+import { Typography, Box } from "@mui/material";
 import React from "react";
 
 const MsgfromHOD = () => {
@@ -33,7 +33,7 @@ const MsgfromHOD = () => {
           </Typography>
           <Typography textAlign="right">~ Vivek Kanhangad</Typography>
         </Box>
-        <img src="Images/gallery/IMG_6913.JPG" width="500" />
+        <img src="Images/gallery/IMG_6913.JPG"  alt="Hod image" width="500" />
       </Box>
     </>
   );

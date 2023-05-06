@@ -14,7 +14,6 @@ import Collapse from "@mui/material/Collapse";
 import ExpandLess from "@mui/icons-material/ExpandLess";
 import ExpandMore from "@mui/icons-material/ExpandMore";
 import navs from "../navdata";
-import { useEffect } from "react";
 const NewMobileHeader = () => {
   const [ani, setAni] = React.useState(-1);
   const [aniani, setAniani] = React.useState(0);

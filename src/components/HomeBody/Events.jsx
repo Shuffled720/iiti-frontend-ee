@@ -1,6 +1,6 @@
 import React from "react";
 import Event from "./Event";
-import { Button, Grid, Divider, Typography } from "@mui/material";
+import { Grid, Divider, Typography } from "@mui/material";
 import { useState } from "react";
 import { Box } from "@mui/system";
 import axios from "axios";
@@ -8,7 +8,6 @@ import { useEffect } from "react";
 import { Container } from "@mui/system";
 import NewspaperIcon from "@mui/icons-material/Newspaper";
 import CampaignIcon from "@mui/icons-material/Campaign";
-import CardMedia from "@mui/material/CardMedia";
 export default function Events() {
   const [news, setNews] = useState(1);
   const newsHandler = () => {

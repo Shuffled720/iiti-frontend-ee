@@ -5,8 +5,6 @@ import StaffCard from "../components/PeopleBody/Staff_Card";
 import CommonCard from "../components/PeopleBody/Common_Cards";
 import { useParams } from "react-router-dom";
 import Carousel from "../components/Carousel";
-import NewspaperIcon from "@mui/icons-material/Newspaper";
-import CampaignIcon from "@mui/icons-material/Campaign";
 
 export default function BtechPage(props) {
   const params = useParams();
