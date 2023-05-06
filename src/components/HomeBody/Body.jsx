@@ -3,6 +3,7 @@ import React from "react";
 import AboutUs from "./AboutUs";
 import { motion } from "framer-motion";
 import Events from "./Events";
+import MsgfromHOD from "./MsgfromHOD";
 const Body = () => {
   return (
     <>
@@ -17,6 +18,7 @@ const Body = () => {
           <Events />
         </motion.div>
         <AboutUs />
+        <MsgfromHOD />
       </Container>
     </>
   );

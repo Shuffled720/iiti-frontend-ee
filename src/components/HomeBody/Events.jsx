@@ -8,6 +8,7 @@ import { useEffect } from "react";
 import { Container } from "@mui/system";
 import NewspaperIcon from "@mui/icons-material/Newspaper";
 import CampaignIcon from "@mui/icons-material/Campaign";
+import CardMedia from "@mui/material/CardMedia";
 export default function Events() {
   const [news, setNews] = useState(1);
   const newsHandler = () => {
@@ -188,6 +189,7 @@ export default function Events() {
           <span className="capitalize text-4xl font-bold">Events</span>
           <br />
           <br />
+
           <Grid
             container
             justifyContent={{ xs: "center", sm: "left" }}

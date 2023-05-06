@@ -14,14 +14,16 @@ import Collapse from "@mui/material/Collapse";
 import ExpandLess from "@mui/icons-material/ExpandLess";
 import ExpandMore from "@mui/icons-material/ExpandMore";
 import navs from "../navdata";
-
+import { useEffect } from "react";
 const NewMobileHeader = () => {
-  const [ani, setAni] = React.useState(0);
+  const [ani, setAni] = React.useState(-1);
   const [aniani, setAniani] = React.useState(0);
 
   const [toggle1, setToggle1] = React.useState(0);
   const [toggle2, setToggle2] = React.useState(0);
-
+  // useEffect(() => {
+  //   setToggle1
+  // },[ani])
   const [state, setState] = React.useState({
     top: false,
     left: false,
@@ -69,13 +71,15 @@ const NewMobileHeader = () => {
         {Object.keys(navs).map((key, i) => (
           <>
             <ListItemButton
-              onClick={() => {
-                setAni(i);
-                setToggle1(1);
+              onClick={() => { 
+                // setAni(i);
+                // toggle1===0?setToggle1(!toggle1):setToggle1(1);
+                ani===i? <>{(setToggle1(!toggle1))}</> : <>{setAni(i)} {toggle1===0?setToggle1(!toggle1):setToggle1(1)}</>
+                setAniani(0);
               }}
             >
               <ListItemText primary={key} />
-              {ani === i ? (
+              {(ani === i)&&(toggle1===1) ? (
                 <>
                   <ExpandLess />
                 </>
@@ -96,15 +100,15 @@ const NewMobileHeader = () => {
                           sx={{ pl: 4 }}
                           onClick={() => {
                             setAniani(i1);
-                            setToggle2(1);
+                            setToggle2(!toggle2);
                           }}
                         >
                           <Link className="nav-link" to={navs[key][key1]}>
                             <ListItemText primary={key1} />
                           </Link>
                           {typeof navs[key][key1] === "object" ? (
-                            <>
-                              {aniani === i1 ? (
+                            <Box sx={{ marginLeft: "auto" }}>
+                              {(aniani === i1 )? (
                                 <>
                                   <ExpandLess />
                                 </>
@@ -113,12 +117,12 @@ const NewMobileHeader = () => {
                                   <ExpandMore />
                                 </>
                               )}
-                            </>
+                            </Box>
                           ) : (
                             <></>
                           )}
                         </ListItemButton>
-                        {aniani === i1 ? (
+                        {(aniani === i1)? (
                           <>
                             <Collapse in={toggle2} timeout="auto" unmountOnExit>
                               <List>
@@ -128,7 +132,7 @@ const NewMobileHeader = () => {
                                       {typeof navs[key][key1] === "object" ? (
                                         <>
                                           <ListItemButton
-                                            sx={{ pl: 4 }}
+                                            sx={{ pl: 6 }}
                                             onClick={() => {
                                               setAniani(i1);
                                               setToggle2(0);
@@ -184,7 +188,7 @@ const NewMobileHeader = () => {
         >
           <Link to={"/"}>
             <Box>
-              <img src="/Images/logo/blue_logo.png" alt="loggg" width="50" />
+              <img src="/Images/logo/blue_logo.png" alt="logo" width="50" />
             </Box>
           </Link>
           <Link to={"/"}>

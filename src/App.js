@@ -1,4 +1,6 @@
 import "./App.css";
+import React from "react";
+import { useEffect } from "react";
 import theme from "./Theme";
 import Header from "./components/Header";
 import HomePage from "./pages/HomePage";
@@ -25,7 +27,16 @@ import ContactPage from "./pages/ContactPage";
 import ProjectPage from "./pages/ProjectPage";
 
 function App() {
-  return (
+  //   const [isLoading, setIsLoading] = React.useState(true);
+  // const handleLoading = () => {
+  //   setIsLoading(false);
+  //   };
+  //   useEffect(() => {
+  //     window.addEventListener("load", handleLoading);
+  //     return () => window.removeEventListener("load", handleLoading);
+  //   }, []);
+  // !isLoading ?
+  return  (
     <>
       <BrowserRouter>
         <ThemeProvider theme={theme}>
@@ -88,7 +99,7 @@ function App() {
         </ThemeProvider>
       </BrowserRouter>
     </>
-  );
+  )
 }
 
 export default App;

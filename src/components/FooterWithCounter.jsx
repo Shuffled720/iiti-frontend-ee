@@ -534,6 +534,7 @@ const FooterWithCounter = () => {
                             Administration
                           </Typography>
                         </Link>
+                        
                         <Link to="/contact">
                           <Typography
                             fontSize="0.7rem"
