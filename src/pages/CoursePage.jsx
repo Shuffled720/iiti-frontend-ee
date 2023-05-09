@@ -13,7 +13,7 @@ export default function CoursePage() {
 
   useEffect(() => {
     axios
-      .get(`https://rupal17.pythonanywhere.com/api/course/read/${param.program}`)
+      .get(`https://rupal17.pythonanywhere.com/api/course/read/${param.program}`,{ mode: 'cors' })
       .then((response) => setData(response.data))
       .catch((error) => setIsError(error.message));
     if (!isError) {
@@ -22,7 +22,7 @@ export default function CoursePage() {
   }, [param.program, isError]);
   useEffect(() => {
     axios
-      .get(`https://rupal17.pythonanywhere.com/api/course/read/elective/${param.program}`)
+      .get(`https://rupal17.pythonanywhere.com/api/course/read/elective/${param.program}`,{ mode: 'cors' })
       .then((response) => setElective(response.data))
       .catch((error) => setIsError(error.message));
     if (!isError) {

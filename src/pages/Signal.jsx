@@ -11,7 +11,7 @@ export default function Signal() {
   useEffect(() => {
     axios
       .get(
-        "https://rupal17.pythonanywhere.com/api/research/Communication, Signal and Image Processing"
+        "https://rupal17.pythonanywhere.com/api/research/Communication, Signal and Image Processing",{ mode: 'cors' }
       )
       .then((response) => setResearch(response.data))
       .catch((error) => setIsError(error.message));

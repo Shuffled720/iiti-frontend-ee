@@ -11,7 +11,7 @@ export default function Power() {
   useEffect(() => {
     axios
       .get(
-        "https://rupal17.pythonanywhere.com/api/research/Power Electronics and Power Systems"
+        "https://rupal17.pythonanywhere.com/api/research/Power Electronics and Power Systems",{ mode: 'cors' }
       )
       .then((response) => setResearch(response.data))
       .catch((error) => setIsError(error.message));

@@ -8,7 +8,7 @@ export default function ProjectPage() {
 
   useEffect(() => {
     axios
-      .get(`https://rupal17.pythonanywhere.com/api/research/project/read`)
+      .get(`https://rupal17.pythonanywhere.com/api/research/project/read`,{ mode: 'cors' })
       .then((response) => setData(response.data))
       .catch((error) => setIsError(error.message));
     if (!isError) {

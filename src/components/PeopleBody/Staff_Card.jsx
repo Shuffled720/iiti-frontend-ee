@@ -10,14 +10,14 @@ const StaffCard = () => {
   const [isError, setIsError] = useState();
   useEffect(() => {
     axios
-      .get(`https://rupal17.pythonanywhere.com/api/people/Faculty/read`)
+      .get(`https://rupal17.pythonanywhere.com/api/people/Faculty/read`, { mode: 'cors' })
       .then((response) => setData(response.data))
       .catch((error) => setIsError(error.message));
     if (!isError) {
       setIsError("Not Available");
     }
   }, [isError]);
-
+  console.log(data);
   return (
     <>
       <Container sx={{ display: { xs: "none", md: "block" } }}>
@@ -36,7 +36,8 @@ const StaffCard = () => {
               <Box sx={{ p: 2 }}>
                 <img alt=''
                   width="150"
-                  src={`https://rupal17.pythonanywhere.com${item.image}`}
+                  src={`https://www.pythonanywhere.com/user/rupal17/files/home/rupal17/iiti-backend-website/ee${item.image}`}
+                  // src="https://www.pythonanywhere.com/user/rupal17/files/home/rupal17/iiti-backend-website/ee/media/images/Amod.JPG"
                   loading="lazy"
                 />
               </Box>
@@ -81,7 +82,9 @@ const StaffCard = () => {
                 <img alt=''
                   width="110"
                   height="169"
-                  src={`https://rupal17.pythonanywhere.com${item.image}`}
+                  // src={`/home/rupal17/iiti-backend-website/ee${item.image}`}
+                  src={`https://www.pythonanywhere.com/user/rupal17/files/home/rupal17/iiti-backend-website/ee${item.image}`}
+                  // src=''
                   loading="lazy"
                 />
               </Box>
