@@ -6,6 +6,7 @@ import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import { Grid } from "@mui/material";
 import { Link } from "react-router-dom";
+import CardMedia from "@mui/material/CardMedia";
 
 export default function Event(props) {
   return (
@@ -13,13 +14,20 @@ export default function Event(props) {
       <Card
         sx={{
           minWidth: 300,
-          borderRight: 2,
-          borderTop: 2,
+          // borderRight: 3,
+          // borderTop: 3,
           borderRadius: 0,
           borderColor: "primary.main",
         }}
         elevation={1}
       >
+        
+          <CardMedia
+            component="img"
+            sx={{ height: 140 }}
+            image="Images/gallery/IMG_6913.JPG"
+          />
+       
         <CardContent>
           <Grid
             container

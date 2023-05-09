@@ -31,47 +31,55 @@ export default function Common_Cards(props) {
       >
         {data?.map((item, i) => (
           <>
-            {console.log(item.image)}
-            <Grid item mt={5}>
-              <Card sx={{ width: 150, height: 280 }}>
-                {item.image ? (
-                  <CardMedia
-                    sx={{ height: "150px" }}
-                    image={`/home/rupal17/iiti-backend-website/ee${item.image}`}
-                    // title="Faculty"
-                    loading="lazy"
-                  />
-                ) : (
-                  <>
-                    <CardMedia
-                      sx={{ height: 150 }}
-                      image="/Images/profile_placeholder.jpg"
-                      // title="Faculty"
-                      loading="lazy"
-                    />
-                  </>
-                )}
-                {/* <CardMedia sx={{ height: 150 }} image={props.photo} title="Staff" /> */}
-                <CardContent>
-                  <Typography gutterBottom component="div" fontSize={12}>
-                    {item.name}
-                  </Typography>
-                  <Typography
-                    variant="body2"
-                    color="text.secondary"
-                    fontSize={12}
-                  >
-                    <p>{item.roll_no}</p>
-                    <p> {item.year}</p>
-                    <p> {item.program}</p>
-                    <p> {item.date}</p>
-                    <p>{item.title}</p>
+            {props.prog === item.program ? (
+              <>
+                <>
+                  {console.log(item.image)}
+                  <Grid item mt={5}>
+                    <Card sx={{ width: 150, height: 280 }}>
+                      {item.image ? (
+                        <CardMedia
+                          sx={{ height: "150px" }}
+                          image={`/home/rupal17/iiti-backend-website/ee${item.image}`}
+                          // title="Faculty"
+                          loading="lazy"
+                        />
+                      ) : (
+                        <>
+                          <CardMedia
+                            sx={{ height: 150 }}
+                            image="/Images/profile_placeholder.jpg"
+                            // title="Faculty"
+                            loading="lazy"
+                          />
+                        </>
+                      )}
+                      {/* <CardMedia sx={{ height: 150 }} image={props.photo} title="Staff" /> */}
+                      <CardContent>
+                        <Typography gutterBottom component="div" fontSize={12}>
+                          {item.name}
+                        </Typography>
+                        <Typography
+                          variant="body2"
+                          color="text.secondary"
+                          fontSize={12}
+                        >
+                          <p>{item.roll_no}</p>
+                          <p> {item.year}</p>
+                          <p> {item.program}</p>
+                          <p> {item.date}</p>
+                          <p>{item.title}</p>
 
-                    <p> {item.email}</p>
-                  </Typography>
-                </CardContent>
-              </Card>
-            </Grid>
+                          <p> {item.email}</p>
+                        </Typography>
+                      </CardContent>
+                    </Card>
+                  </Grid>
+                </>
+              </>
+            ) : (
+              <></>
+            )}
           </>
         ))}
       </Grid>

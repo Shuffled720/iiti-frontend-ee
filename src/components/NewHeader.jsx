@@ -2,26 +2,92 @@ import { Box, Divider, Typography } from "@mui/material";
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Components Css/Header.css";
+import navs from "../navdata";
+
 const NewHeader = () => {
   return (
     <Box sx={{ display: { xs: "none", md: "block" } }}>
       <div className="navdiv">
         <nav className="naviiii">
           <div className="logo-text">
-            <img
-              src="/Images/logo/blue_logo.png"
-              alt="logo_png"
-              width="100px"
-            ></img>
-            <div>
-              <Typography variant="h5" color={"white"} padding={5}>
-                Indian Institute Of Technology Indore
-                <br /> Department Of Electrical Engineering
-              </Typography>
-            </div>
+            <Link to="/">
+              <img
+                src="/Images/logo/blue_logo.png"
+                alt="logo_png"
+                width="100px"
+              ></img>
+            </Link>
+            <Link to="/">
+              <div>
+                <Typography variant="h5" color={"white"} padding={5}>
+                  Indian Institute Of Technology Indore
+                  <br /> Department Of Electrical Engineering
+                </Typography>
+              </div>
+            </Link>
           </div>
-
           <div className="menu-wrapper">
+            <ul className="nav-links">
+              <li className="menu">
+                <Link to="/">Home</Link>
+              </li>
+              {Object.keys(navs).map((key, i) => (
+                <>
+                  <li className="menu">
+                    <Link to="#">{key}</Link>
+                    {typeof navs[key] === "object" ? (
+                      <>
+                        <ul className="ani-menu">
+                          {Object.keys(navs[key]).map((key2, i2) => (
+                            <>
+                              {typeof navs[key][key2] === "object" ? (
+                                <>
+                                  <li className="aniani-menu-trigger">
+                                    <div className="link-button">
+                                      <Link to="#">{key2}</Link>
+                                      <ul className="aniani-menu">
+                                        {Object.keys(navs[key][key2]).map(
+                                          (key3, i3) => (
+                                            <>
+                                              <li>
+                                                <div className="link-button">
+                                                  <Link
+                                                    to={navs[key][key2][key3]}
+                                                  >
+                                                    {key3}
+                                                  </Link>
+                                                </div>
+                                              </li>
+                                            </>
+                                          )
+                                        )}
+                                      </ul>
+                                    </div>
+                                  </li>
+                                </>
+                              ) : (
+                                <>
+                                  <li>
+                                    <div className="link-button">
+                                      <Link to={navs[key][key2]}>{key2}</Link>
+                                    </div>
+                                  </li>
+                                </>
+                              )}
+                              <Divider />
+                            </>
+                          ))}
+                        </ul>
+                      </>
+                    ) : (
+                      <></>
+                    )}
+                  </li>
+                </>
+              ))}
+            </ul>
+          </div>
+          {/* <div className="menu-wrapper">
             <ul className="nav-links">
               <li className="menu">
                 <Link to="/">Home</Link>
@@ -168,13 +234,13 @@ const NewHeader = () => {
               <li className="menu">
                 <Link to="">Research</Link>
                 <ul className="ani-menu">
-                  <li>
+                  <li className="aniani-menu-trigger">
                     <div className="link-button">
                       <Link to="/research">Research Areas</Link>
                     </div>
                   </li>
                   <Divider />
-                  <li>
+                  <li className="aniani-menu-trigger">
                     <div className="link-button">
                       <Link to="/labs">Laboratories</Link>
                     </div>
@@ -342,7 +408,7 @@ const NewHeader = () => {
                 </ul>
               </li>
             </ul>
-          </div>
+          </div> */}
         </nav>
       </div>
     </Box>

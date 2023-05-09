@@ -46,30 +46,58 @@ export default function ResearchPage() {
 
         <Grid
           container
-          justifyContent="space-around"
+          justifyContent="center"
           direction="row"
           alignItems="top"
-          spacing={2}
+          spacing={4}
+          margin="auto"
         >
-          <Grid item>
+          <Grid
+            item
+            xs={12}
+            md={6}
+            sx={{ display: "flex", justifyContent: "center", height: "10%" }}
+          >
             <Cards
               specialisation={"Communications and Signal Processing"}
               action={"/signals"}
               photo={"Images/logo/signal.jpg"}
             />
           </Grid>
-          <Grid item>
+          <Grid
+            item
+            xs={12}
+            md={6}
+            sx={{ display: "flex", justifyContent: "center" }}
+          >
             <Cards
               specialisation={"VLSI Design and Nano Electronics"}
               action={"/vlsi"}
               photo={"Images/logo/VLSI.jpg"}
             />
           </Grid>
-          <Grid item>
+          <Grid
+            item
+            xs={12}
+            md={6}
+            sx={{ display: "flex", justifyContent: "center" }}
+          >
             <Cards
               specialisation={"Power Electronics and Power Systems"}
               photo={"Images/logo/power.png"}
               action={"/power"}
+            />
+          </Grid>
+          <Grid
+            item
+            xs={12}
+            md={6}
+            sx={{ display: "flex", justifyContent: "center" }}
+          >
+            <Cards
+              specialisation={"RF and Microwave"}
+              photo={"Images/logo/RFMF.jpg"}
+              action={"/RF-MW"}
             />
           </Grid>
         </Grid>

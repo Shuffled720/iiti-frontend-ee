@@ -7,14 +7,13 @@ const NewCarousel = () => {
     //   <Container>
     <div className="imgSlider">
       <div className="Carousel-text">
-        <Typography
-          fontSize={"2rem"}
-          margin={"auto"}
-          fontWeight={600}
-        >
-          Welcome to the  Department of
+        <Typography fontSize={"2rem"} margin={"auto"} fontWeight={600}>
+          Welcome to the Department of
           <br />
           Electrical Engineering
+          <br />
+          @ IIT Indore
+          <br />
         </Typography>
       </div>
     </div>

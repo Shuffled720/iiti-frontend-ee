@@ -140,13 +140,14 @@ function Example(props) {
               {
                 name: "Random Name #1",
                 description: "Probably the most random thing you have ever seen!",
-                img_url: "/Images/Carousel/staff/1.jpg",
+                img_url: "/Images/Carousel/staff/2.jpg",
               },
               {
                 name: "Random Name #1",
                 description: "Probably the most random thing you have ever seen!",
-                img_url: "/Images/Carousel/staff/2.jpg",
+                img_url: "/Images/Carousel/staff/1.jpg",
               },
+              
 
             ])
             : (items = [])

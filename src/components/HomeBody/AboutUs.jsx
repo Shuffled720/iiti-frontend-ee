@@ -6,7 +6,11 @@ export default function AboutUs() {
   return (
     <>
       <Box sx={{ py: 5 }}>
-        <Typography variant="h4" fontWeight="600">
+        <Typography
+          variant="h4"
+          fontWeight="600"
+          
+        >
           About Us
         </Typography>
 

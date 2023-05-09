@@ -44,8 +44,13 @@ export default function ProgramPage() {
           </Box>
           <br />
           <br />
-          <Typography variant="h5" color="primary.main" textAlign="left">
-            BTech
+          <Typography
+            variant="h5"
+            color="primary.main"
+            textAlign="center"
+            fontWeight="600"
+          >
+            B.Tech
           </Typography>
           <p>
             The B.Tech. Program in Electrical Engineering is a four-year program
@@ -60,8 +65,13 @@ export default function ProgramPage() {
           </p>
           <br />
           <br />
-          <Typography variant="h5" color="primary.main" textAlign="left">
-            MTech
+          <Typography
+            variant="h5"
+            color="primary.main"
+            textAlign="center"
+            fontWeight="600"
+          >
+            M.Tech
           </Typography>
           <p>
             M. Tech. program in Communication and Signal Processing - A two year
@@ -75,8 +85,13 @@ export default function ProgramPage() {
           </p>
           <br />
           <br />
-          <Typography variant="h5" color="primary.main" textAlign="left">
-            PhD
+          <Typography
+            variant="h5"
+            color="primary.main"
+            textAlign="center"
+            fontWeight="600"
+          >
+            Ph.D
           </Typography>
           <p>
             The Ph.D. program is an inter–disciplinary program undertaken by

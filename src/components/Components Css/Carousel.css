@@ -53,6 +53,7 @@
 }
 
 .Carousel-text {
+  font-family: "Bruno Ace", cursive !important;
   background-color: rgba(0, 0, 0, 0.5);
   height: 100%;
   margin: auto;
