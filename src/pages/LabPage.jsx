@@ -3,13 +3,12 @@ import { Typography, Box, Container } from "@mui/material";
 import { motion } from "framer-motion";
 import axios from "axios";
 import { useState, useEffect } from "react";
-import { Route, Routes, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 
 export default function LabPage() {
   const [labs, setLabs] = useState([]);
   const [isError, setIsError] = useState([]);
-  const navigate = useNavigate();
 
   useEffect(() => {
     // navigate('/https://drive.google.com/file/d/1_LtoekllDZ5tZT1oRkiF8Ilu6CyZrdE_/view?usp=sharing', { replace: true });
