@@ -24,7 +24,6 @@ import StatsPage from "./pages/StatsPage";
 import ProgramPage from "./pages/ProgramPage";
 import ContactPage from "./pages/ContactPage";
 import ProjectPage from "./pages/ProjectPage";
-import NewResearchPage from "./pages/ResearchCard";
 
 function App() {
   //   const [isLoading, setIsLoading] = React.useState(true);
