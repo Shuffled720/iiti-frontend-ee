@@ -50,7 +50,6 @@ export default function ResearchPage() {
           direction="row"
           alignItems="top"
           spacing={5}
-          margin="auto"
         >
           <Grid
             item
