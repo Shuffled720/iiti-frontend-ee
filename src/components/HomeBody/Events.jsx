@@ -8,7 +8,7 @@ import { useEffect } from "react";
 import { Container } from "@mui/system";
 import NewspaperIcon from "@mui/icons-material/Newspaper";
 import CampaignIcon from "@mui/icons-material/Campaign";
-import { api, image_api } from "../../../../iiti-frontend-ee/src/api";
+import { api, image_api } from "../../api";
 export default function Events() {
   console.log(api);
   const [news, setNews] = useState(1);

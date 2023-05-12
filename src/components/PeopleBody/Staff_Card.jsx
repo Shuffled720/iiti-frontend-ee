@@ -4,7 +4,7 @@ import { Container } from "@mui/material";
 import { Typography } from "@mui/material";
 import axios from "axios";
 import { Box } from "@mui/material";
-import { api, image_api } from "../../../../iiti-frontend-ee/src/api";
+import { api, image_api } from "../../api";
 
 const StaffCard = () => {
   const [data, setData] = useState();
