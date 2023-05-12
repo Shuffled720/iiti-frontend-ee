@@ -4,13 +4,14 @@ import { Container } from "@mui/material";
 import { Typography } from "@mui/material";
 import axios from "axios";
 import { Box } from "@mui/material";
+import { api, image_api } from "../../../../iiti-frontend-ee/src/api";
 
 const StaffCard = () => {
   const [data, setData] = useState();
   const [isError, setIsError] = useState();
   useEffect(() => {
     axios
-      .get(`https://rupal17.pythonanywhere.com/api/people/Faculty/read`)
+      .get(`${api}/people/Faculty/read`)
       .then((response) => setData(response.data))
       .catch((error) => setIsError(error.message));
     if (!isError) {
@@ -36,7 +37,7 @@ const StaffCard = () => {
               <Box sx={{ p: 2 }}>
                 <img alt=''
                   width="150"
-                  src={`https://rupal17.pythonanywhere.com${item.image}`}
+                  src={`${image_api}${item.image}`}
                   loading="lazy"
                 />
               </Box>
@@ -81,7 +82,7 @@ const StaffCard = () => {
                 <img alt=''
                   width="110"
                   height="169"
-                  src={`https://rupal17.pythonanywhere.com${item.image}`}
+                  src={`${image_api}${item.image}`}
                   loading="lazy"
                 />
               </Box>

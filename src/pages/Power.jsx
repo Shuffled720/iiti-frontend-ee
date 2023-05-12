@@ -4,15 +4,13 @@ import { motion } from "framer-motion";
 import { Divider } from "@mui/material";
 import axios from "axios";
 import { useEffect, useState } from "react";
-
+import { api, image_api } from "../api";
 export default function Power() {
   const [research, setResearch] = React.useState([]);
   const [isError, setIsError] = useState([]);
   useEffect(() => {
     axios
-      .get(
-        "https://rupal17.pythonanywhere.com/api/research/Power Electronics and Power Systems"
-      )
+      .get(`${api}/research/Power Electronics and Power Systems`)
       .then((response) => setResearch(response.data))
       .catch((error) => setIsError(error.message));
     if (!isError) {

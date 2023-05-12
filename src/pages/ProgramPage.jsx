@@ -50,14 +50,14 @@ export default function ProgramPage() {
             textAlign="center"
             fontWeight="600"
           >
-            B.Tech
+            B. Tech
           </Typography>
           <p>
-            The B.Tech. Program in Electrical Engineering is a four-year program
-            with selection through the IIT Joint Entrance Examination. Students
-            are encouraged to work on research projects from their second year
-            onwards in addition to the mandatory summer internship after the
-            third year and the final year project. Projects are
+            The B. Tech. Program in Electrical Engineering is a four-year
+            program with selection through the IIT Joint Entrance Examination.
+            Students are encouraged to work on research projects from their
+            second year onwards in addition to the mandatory summer internship
+            after the third year and the final year project. Projects are
             inter–disciplinary and involve faculty members from other
             disciplines. The final year project is research-oriented wherein
             students interact with research scholars, faculty members and
@@ -71,13 +71,13 @@ export default function ProgramPage() {
             textAlign="center"
             fontWeight="600"
           >
-            M.Tech
+            M. Tech
           </Typography>
           <p>
             M. Tech. program in Communication and Signal Processing - A two year
             masters program focusing on specialized courses in communication and
             signal processing. The second year of the program is completely
-            dedicated to Master's thesis work. M.Tech. in VLSI Design and
+            dedicated to Master's thesis work. M. Tech. in VLSI Design and
             Nano-electronic is also proposed - A two year masters program
             focusing on specialized courses in VLSI Design and Nano-electronic.
             The second year of the program is completely dedicated to Master's

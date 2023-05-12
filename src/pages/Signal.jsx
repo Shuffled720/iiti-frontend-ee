@@ -4,15 +4,13 @@ import { motion } from "framer-motion";
 import { Divider } from "@mui/material";
 import axios from "axios";
 import { useEffect, useState } from "react";
-
+import { api, image_api } from "../api";
 export default function Signal() {
   const [research, setResearch] = React.useState([]);
   const [isError, setIsError] = useState([]);
   useEffect(() => {
     axios
-      .get(
-        "https://rupal17.pythonanywhere.com/api/research/Communication, Signal and Image Processing"
-      )
+      .get(`${api}/research/Communication, Signal and Image Processing`)
       .then((response) => setResearch(response.data))
       .catch((error) => setIsError(error.message));
     if (!isError) {

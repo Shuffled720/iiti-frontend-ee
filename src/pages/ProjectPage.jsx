@@ -2,13 +2,14 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { Typography, Box } from "@mui/material";
 import { motion } from "framer-motion";
+import { api, image_api } from "../api";
 export default function ProjectPage() {
   const [data, setData] = useState();
   const [isError, setIsError] = useState();
 
   useEffect(() => {
     axios
-      .get(`https://rupal17.pythonanywhere.com/api/research/project/read`)
+      .get(`${api}/research/project/read`)
       .then((response) => setData(response.data))
       .catch((error) => setIsError(error.message));
     if (!isError) {

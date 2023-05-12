@@ -8,7 +8,9 @@ import { useEffect } from "react";
 import { Container } from "@mui/system";
 import NewspaperIcon from "@mui/icons-material/Newspaper";
 import CampaignIcon from "@mui/icons-material/Campaign";
+import { api, image_api } from "../../../../iiti-frontend-ee/src/api";
 export default function Events() {
+  console.log(api);
   const [news, setNews] = useState(1);
   const newsHandler = () => {
     setNews(1);
@@ -22,7 +24,7 @@ export default function Events() {
   const [isError, setIsError] = useState([]);
   useEffect(() => {
     axios
-      .get("https://rupal17.pythonanywhere.com/api/events/read", {
+      .get(`${api}/events/read`, {
         mode: "cors",
       })
       .then((response) => setEvent(response.data))
@@ -33,7 +35,7 @@ export default function Events() {
   }, [isError]);
   useEffect(() => {
     axios
-      .get("https://rupal17.pythonanywhere.com/api/news/read", { mode: "cors" })
+      .get(`${api}/news/read`, { mode: "cors" })
       .then((response) => setNewsitem(response.data))
       .catch((error) => setIsError(error.message));
     if (!isError) {
@@ -42,7 +44,7 @@ export default function Events() {
   }, [isError]);
   useEffect(() => {
     axios
-      .get("https://rupal17.pythonanywhere.com/api/announcement/read", {
+      .get(`${api}/announcement/read`, {
         mode: "cors",
       })
       .then((response) => setAnnounce(response.data))
@@ -155,7 +157,8 @@ export default function Events() {
                       <Typography fontSize={12} mb={1}>
                         {nitem.description}
                       </Typography>
-
+                      {nitem.image?<img src={`${image_api}${nitem.image}`} width={"20%"} />:<></>}
+                      <br />
                       <hr color="rgb(50,50,50,.1)" />
                     </>
                   ))}
@@ -207,6 +210,7 @@ export default function Events() {
                   time={item.time}
                   day={item.day}
                   link={item.link}
+                  image={item.image}
                 />
               </Grid>
             ))}

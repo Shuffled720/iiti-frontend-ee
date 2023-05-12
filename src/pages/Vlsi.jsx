@@ -3,6 +3,7 @@ import { Typography, Box, Container } from "@mui/material";
 import { motion } from "framer-motion";
 import { Divider } from "@mui/material";
 import axios from "axios";
+import { api, image_api } from "../api";
 import { useEffect, useState } from "react";
 
 export default function Vlsi() {
@@ -10,7 +11,7 @@ export default function Vlsi() {
   const [isError, setIsError] = useState([]);
   useEffect(() => {
     axios
-      .get("https://rupal17.pythonanywhere.com/api/research/vlsi", { mode: 'cors' })
+      .get(`${api}/research/vlsi`, { mode: "cors" })
       .then((response) => setResearch(response.data))
       .catch((error) => setIsError(error.message));
     if (!isError) {
@@ -69,8 +70,7 @@ export default function Vlsi() {
               <Typography variant="h6" fontWeight={400} color={"primary.main"}>
                 {item2.name}
               </Typography>
-              <Container>
-              </Container>
+              <Container></Container>
             </>
           ))}
 

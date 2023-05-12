@@ -8,7 +8,7 @@ const navs = {
   People: {
     Faculty: "/people/Faculty",
     Staff: "/people/Staff",
-    "M.Tech students": {
+    "M. Tech students": {
       2020: "/people/MTech/2020",
       2021: "/people/MTech/2021",
     },
@@ -25,7 +25,7 @@ const navs = {
       2017: "/people/Alumni/2017",
       2018: "/people/Alumni/2018",
     },
-    "B.Tech students": {
+    "B. Tech students": {
       2019: "/people/BTech/2019",
       2020: "/people/BTech/2020",
       2021: "/people/BTech/2021",
@@ -53,8 +53,8 @@ const navs = {
       2022: "/research/Recent Publications/2022",
     },
     Laboratories: {
-      UG: "/labs",
-      PG: "/labs",
+      UG: "/labs/ug",
+      PG: "/labs/pg",
     },
   },
 

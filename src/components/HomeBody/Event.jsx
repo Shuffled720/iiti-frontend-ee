@@ -7,7 +7,7 @@ import Typography from "@mui/material/Typography";
 import { Grid } from "@mui/material";
 import { Link } from "react-router-dom";
 import CardMedia from "@mui/material/CardMedia";
-
+import { api, image_api } from "../../api";
 export default function Event(props) {
   return (
     <div>
@@ -21,13 +21,14 @@ export default function Event(props) {
         }}
         elevation={1}
       >
-        
-          <CardMedia
-            component="img"
-            sx={{ height: 140 }}
-            image="Images/gallery/IMG_6913.JPG"
-          />
-       
+        {console.log(props)}
+        <CardMedia
+          component="img"
+          sx={{ height: 140 }}
+          image={`${image_api}${props.image}`}
+          loading="lazy"
+        />
+
         <CardContent>
           <Grid
             container
@@ -112,11 +113,11 @@ export default function Event(props) {
             </Grid>
           </Grid>
         </CardContent>
-        <CardActions>
+        {/* <CardActions>
           <Button size="small">
             <Link to={props.link}> Learn More...</Link>
           </Button>
-        </CardActions>
+        </CardActions> */}
       </Card>
     </div>
   );

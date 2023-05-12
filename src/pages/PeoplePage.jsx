@@ -10,7 +10,7 @@ export default function BtechPage(props) {
   const params = useParams();
   console.log(params.program);
   console.log(params.year);
-   const [news, setNews] = React.useState(1);
+  const [news, setNews] = React.useState(1);
   return (
     <div>
       <Container sx={{ py: 2 }}>
@@ -57,11 +57,11 @@ export default function BtechPage(props) {
           marginTop={3}
         >
           {params.program === "BTech" ? (
-            <>B.Tech Students</>
+            <>B. Tech Students</>
           ) : (
             <>
               {params.program === "MTech" ? (
-                <>M.Tech Students</>
+                <>M. Tech Students</>
               ) : (
                 <>
                   {params.program === "PhD" ? (
@@ -232,7 +232,7 @@ export default function BtechPage(props) {
 
         {params.program === "Alumni" ? (
           <>
-            <br/>
+            <br />
             <Grid
               container
               justifyContent="left"
@@ -265,7 +265,7 @@ export default function BtechPage(props) {
                   }}
                 >
                   {/* <Typography sx={{color: news===1?"primary.main":"black" } }> */}
-                  B.Tech
+                  B. Tech
                   {/* </Typography> */}
                 </button>
               </Grid>
@@ -291,7 +291,7 @@ export default function BtechPage(props) {
                     padding: "20px",
                   }}
                 >
-                  M.Tech
+                  M. Tech
                 </button>
               </Grid>
               <Grid
@@ -356,28 +356,44 @@ export default function BtechPage(props) {
             />
             {news === 1 ? (
               <>
-                <CommonCard year={params.year} program={params.program} prog="B.Tech."/>
+                <CommonCard
+                  year={params.year}
+                  program={params.program}
+                  prog="B. Tech."
+                />
               </>
             ) : (
               <></>
             )}
             {news === 2 ? (
               <>
-                <CommonCard year={params.year} program={params.program} prog="M.Tech."/>
+                <CommonCard
+                  year={params.year}
+                  program={params.program}
+                  prog="M. Tech."
+                />
               </>
             ) : (
               <></>
             )}
             {news === 3 ? (
               <>
-                <CommonCard year={params.year} program={params.program} prog="Ph.D."/>
+                <CommonCard
+                  year={params.year}
+                  program={params.program}
+                  prog="Ph.D."
+                />
               </>
             ) : (
               <></>
             )}
             {news === 4 ? (
               <>
-                <CommonCard year={params.year} program={params.program} prog="MS"/>
+                <CommonCard
+                  year={params.year}
+                  program={params.program}
+                  prog="MS"
+                />
               </>
             ) : (
               <></>
