@@ -3,7 +3,7 @@ import axios from "axios";
 import { Typography, Box, Container } from "@mui/material";
 import { motion } from "framer-motion";
 import { useParams } from "react-router-dom";
-import { api, image_api } from "../api";
+import { api } from "../api";
 import LoadingPage from "./LoadingPage";
 export default function CoursePage() {
   const param = useParams();

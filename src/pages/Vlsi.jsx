@@ -3,7 +3,7 @@ import { Typography, Box, Container } from "@mui/material";
 import { motion } from "framer-motion";
 import { Divider } from "@mui/material";
 import axios from "axios";
-import { api, image_api } from "../api";
+import { api } from "../api";
 import { useEffect, useState } from "react";
 
 export default function Vlsi() {
