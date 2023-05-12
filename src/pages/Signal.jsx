@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { Divider } from "@mui/material";
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { api, image_api } from "../api";
+import { api } from "../api";
 export default function Signal() {
   const [research, setResearch] = React.useState([]);
   const [isError, setIsError] = useState([]);

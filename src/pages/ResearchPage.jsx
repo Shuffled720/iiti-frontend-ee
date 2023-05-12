@@ -54,7 +54,7 @@ export default function ResearchPage() {
           <Grid
             item
             xs={12}
-            md={6}
+            md={4}
             sx={{ display: "flex", justifyContent: "center", height: "10%" }}
           >
             {/* <Cards
@@ -64,14 +64,17 @@ export default function ResearchPage() {
             /> */}
             <ResearchCard
               specialisation={"Communications and Signal Processing"}
-              description={"Vishal Kumar and Kusum"}
+              description={
+                "Communication and signal processing are two interrelated fields that deal with the transmission, reception, and analysis of information through various mediums."
+              }
               action={"/signals"}
-              photo={"Images/logo/signal.jpg"} />
+              photo={"Images/logo/signal.jpg"}
+            />
           </Grid>
           <Grid
             item
             xs={12}
-            md={6}
+            md={4}
             sx={{ display: "flex", justifyContent: "center" }}
           >
             {/* <Cards
@@ -81,16 +84,17 @@ export default function ResearchPage() {
             /> */}
             <ResearchCard
               specialisation={"VLSI Design and Nano Electronics"}
-              description={"Vishal Kumar and Kusum"}
-
+              description={
+                "VLSI Design and Nano Electronics focus on the design and manufacture of microelectronic circuits and devices."
+              }
               action={"/vlsi"}
-              photo={"Images/logo/VLSI.jpg"} />
-
+              photo={"Images/logo/VLSI.jpg"}
+            />
           </Grid>
           <Grid
             item
             xs={12}
-            md={6}
+            md={4}
             sx={{ display: "flex", justifyContent: "center" }}
           >
             {/* <Cards
@@ -101,16 +105,17 @@ export default function ResearchPage() {
             /> */}
             <ResearchCard
               specialisation={"Power Electronics and Power Systems"}
-              description={"Vishal Kumar and Kusum"}
-
+              description={
+                "Power Electronics and Power Systems deal with the generation, transmission, distribution, and use of electrical energy."
+              }
               photo={"Images/logo/power.png"}
-              action={"/power"} />
-
+              action={"/power"}
+            />
           </Grid>
           <Grid
             item
             xs={12}
-            md={6}
+            md={4}
             sx={{ display: "flex", justifyContent: "center" }}
           >
             {/* <Cards
@@ -120,11 +125,12 @@ export default function ResearchPage() {
             /> */}
             <ResearchCard
               specialisation={"RF and Microwave"}
-              description={"Vishal Kumar and Kusum"}
-
-              photo={"Images/logo/RFMF.jpg"}
-              action={"/RF-MW"} />
-
+              description={
+                "RF (Radio Frequency) and microwave engineering are two fields of electrical engineering that focus on the design and analysis of high-frequency electronic circuits and systems."
+              }
+              photo={"Images/logo/RF.jpg"}
+              action={"/RF-MW"}
+            />
           </Grid>
         </Grid>
         <br />

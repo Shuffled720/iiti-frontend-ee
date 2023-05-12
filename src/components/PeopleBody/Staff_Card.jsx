@@ -11,7 +11,7 @@ const StaffCard = () => {
   const [isError, setIsError] = useState();
   useEffect(() => {
     axios
-      .get(`https://rupal17.pythonanywhere.com/api/people/Faculty/read`)
+      .get(`${api}/people/Faculty/read`)
       .then((response) => setData(response.data))
       .catch((error) => setIsError(error.message));
     if (!isError) {
@@ -35,15 +35,18 @@ const StaffCard = () => {
               }}
             >
               <Box sx={{ p: 2 }}>
-                <img alt=''
+                <img
+                  alt=""
                   width="150"
-                  src={`https://rupal17.pythonanywhere.com${item.image}`}
+                  src={`${image_api}${item.image}`}
                   loading="lazy"
                 />
               </Box>
               <Box sx={{ p: 2, width: "100%" }}>
                 <Typography variant="h5" color="primary">
-                  <a target="_blank" rel="noreferrer" href={`${item.link}`}>{item.name}</a>
+                  <a target="_blank" rel="noreferrer" href={`${item.link}`}>
+                    {item.name}
+                  </a>
                 </Typography>
                 <Typography variant="h7">{item.title}</Typography>
 
@@ -79,10 +82,11 @@ const StaffCard = () => {
               }}
             >
               <Box>
-                <img alt=''
+                <img
+                  alt=""
                   width="110"
                   height="169"
-                  src={`https://rupal17.pythonanywhere.com${item.image}`}
+                  src={`${image_api}${item.image}`}
                   loading="lazy"
                 />
               </Box>

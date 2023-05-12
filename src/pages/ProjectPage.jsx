@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { Typography, Box } from "@mui/material";
 import { motion } from "framer-motion";
-import { api, image_api } from "../api";
+import { api } from "../api";
 export default function ProjectPage() {
   const [data, setData] = useState();
   const [isError, setIsError] = useState();

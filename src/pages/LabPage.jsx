@@ -11,18 +11,14 @@ export default function LabPage() {
   const [active, setActive] = useState(0);
   const params = useParams();
   useEffect(() => {
-    // navigate('/https://drive.google.com/file/d/1_LtoekllDZ5tZT1oRkiF8Ilu6CyZrdE_/view?usp=sharing', { replace: true });
-    window.location.replace('https://drive.google.com/file/d/1_LtoekllDZ5tZT1oRkiF8Ilu6CyZrdE_/view?usp=sharing');
-
-
     axios
       .get(`${api}/research/labs/${params.program}/read`)
       .then((response) => setLabs(response.data))
       .catch((error) => setIsError(error.message));
     if (!isError) {
       setLabs("Not Available");
-    }
-  }, [isError]);
+    } 
+  }, [isError, params.program]);
   return (
     <div>
       <Container sx={{ py: 2 }}>
