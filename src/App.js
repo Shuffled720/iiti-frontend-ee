@@ -30,76 +30,50 @@ function App() {
   // const [isLoading, setIsLoading] = React.useState(true);
   // const handleLoading = () => {
   //   setIsLoading(false);
-  // };
-  // React.useEffect(() => {
-  //   window.addEventListener("load", handleLoading);
-  //   return () => window.removeEventListener("load", handleLoading);
-  // }, []);
-
-  const [isLoading, setIsLoading] = React.useState(true);
-  React.useEffect(() => {
-    setTimeout(() => {
-      setIsLoading(false);
-    }, 2000);
-  }, []);
+  //   };
+  //   useEffect(() => {
+  //     window.addEventListener("load", handleLoading);
+  //     return () => window.removeEventListener("load", handleLoading);
+  //   }, []);
+  // !isLoading ?
   return (
     <>
-      {isLoading ? (
-        <LoadingPage />
-      ) : (
-        <>
-          <>
-            <BrowserRouter>
-              <ThemeProvider theme={theme}>
-                <Routes>
-                  <Route path="/" element={[<Header />, <HomePage />]} />
-                  <Route
-                    path="/about"
-                    element={[<BlackHeader />, <AboutUsPage />]}
-                  />
-                  <Route
-                    path="/research"
-                    element={[<BlackHeader />, <Research />]}
-                  />
-                  <Route
-                    path="/labs/:program"
-                    element={[<BlackHeader />, <LabPage />]}
-                  />
-                  <Route
-                    path="/people/:program/:year"
-                    element={[<BlackHeader />, <PeoplePage />]}
-                  />    
-                  <Route
-                    path="/people/:program"
-                    element={[<BlackHeader />, <PeoplePage />]}
-                  />
-                  <Route
-                    path="/signals"
-                    element={[<BlackHeader />, <Signal />]}
-                  />
-                  <Route path="/vlsi" element={[<BlackHeader />, <Vlsi />]} />
-                  <Route path="/power" element={[<BlackHeader />, <Power />]} />
-                  <Route
-                    path="/administration"
-                    element={[<BlackHeader />, <AdministrationPage />]}
-                  />
-                  <Route
-                    path="/contact"
-                    element={[<BlackHeader />, <ContactPage />]}
-                  />
-                  <Route
-                    path="/gallery"
-                    element={[<BlackHeader />, <Gallery />]}
-                  />
-                  <Route
-                    path="/courses/:program"
-                    element={[<BlackHeader />, <CoursePage />]}
-                  />
-                  <Route
-                    path="/achievements/books"
-                    element={[<BlackHeader />, <BooksPage />]}
-                  />
-                  {/* <Route
+      <BrowserRouter>
+        <ThemeProvider theme={theme}>
+          <Routes>
+            <Route path="/" element={[<Header />, <HomePage />]} />
+            <Route path="/about" element={[<BlackHeader />, <AboutUsPage />]} />
+            <Route path="/research" element={[<BlackHeader />, <Research />]} />
+            <Route path="/labs" element={[<BlackHeader />, <LabPage />]} />
+            <Route
+              path="/people/:program/:year"
+              element={[<BlackHeader />, <PeoplePage />]}
+            />
+            <Route
+              path="/people/:program"
+              element={[<BlackHeader />, <PeoplePage />]}
+            />
+            <Route path="/signals" element={[<BlackHeader />, <Signal />]} />
+            <Route path="/vlsi" element={[<BlackHeader />, <Vlsi />]} />
+            <Route path="/power" element={[<BlackHeader />, <Power />]} />
+            <Route
+              path="/administration"
+              element={[<BlackHeader />, <AdministrationPage />]}
+            />
+            <Route
+              path="/contact"
+              element={[<BlackHeader />, <ContactPage />]}
+            />
+            <Route path="/gallery" element={[<BlackHeader />, <Gallery />]} />
+            <Route
+              path="/courses/:program"
+              element={[<BlackHeader />, <CoursePage />]}
+            />
+            <Route
+              path="/achievements/books"
+              element={[<BlackHeader />, <BooksPage />]}
+            />
+            {/* <Route
               path="/research/paper/:year"
               element={[<BlackHeader />, <PaperPage />]}
             /> */}

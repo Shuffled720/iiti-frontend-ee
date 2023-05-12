@@ -2,7 +2,7 @@ import React from "react";
 import { Box, Container, Grid } from "@mui/material";
 import { motion } from "framer-motion";
 import Typography from "@mui/material/Typography";
-import Cards from "../components/ResearchBody/Cards";
+import ResearchCard from "./ResearchCard";
 
 export default function ResearchPage() {
   return (
@@ -46,11 +46,10 @@ export default function ResearchPage() {
 
         <Grid
           container
-          justifyContent="center"
+          justifyContent="space-around"
           direction="row"
           alignItems="top"
-          spacing={4}
-          margin="auto"
+          spacing={5}
         >
           <Grid
             item
@@ -58,11 +57,16 @@ export default function ResearchPage() {
             md={6}
             sx={{ display: "flex", justifyContent: "center", height: "10%" }}
           >
-            <Cards
-              specialisation={"Communications and Signal Processing"}
+            {/* <Cards
+              specialisation={"Communicationssssssssssssss and Signal Processing"}
               action={"/signals"}
               photo={"Images/logo/signal.jpg"}
-            />
+            /> */}
+            <ResearchCard
+              specialisation={"Communications and Signal Processing"}
+              description={"Vishal Kumar and Kusum"}
+              action={"/signals"}
+              photo={"Images/logo/signal.jpg"} />
           </Grid>
           <Grid
             item
@@ -70,11 +74,18 @@ export default function ResearchPage() {
             md={6}
             sx={{ display: "flex", justifyContent: "center" }}
           >
-            <Cards
+            {/* <Cards
               specialisation={"VLSI Design and Nano Electronics"}
               action={"/vlsi"}
               photo={"Images/logo/VLSI.jpg"}
-            />
+            /> */}
+            <ResearchCard
+              specialisation={"VLSI Design and Nano Electronics"}
+              description={"Vishal Kumar and Kusum"}
+
+              action={"/vlsi"}
+              photo={"Images/logo/VLSI.jpg"} />
+
           </Grid>
           <Grid
             item
@@ -82,11 +93,19 @@ export default function ResearchPage() {
             md={6}
             sx={{ display: "flex", justifyContent: "center" }}
           >
-            <Cards
+            {/* <Cards
               specialisation={"Power Electronics and Power Systems"}
               photo={"Images/logo/power.png"}
               action={"/power"}
-            />
+
+            /> */}
+            <ResearchCard
+              specialisation={"Power Electronics and Power Systems"}
+              description={"Vishal Kumar and Kusum"}
+
+              photo={"Images/logo/power.png"}
+              action={"/power"} />
+
           </Grid>
           <Grid
             item
@@ -94,11 +113,18 @@ export default function ResearchPage() {
             md={6}
             sx={{ display: "flex", justifyContent: "center" }}
           >
-            <Cards
+            {/* <Cards
               specialisation={"RF and Microwave"}
               photo={"Images/logo/RFMF.jpg"}
               action={"/RF-MW"}
-            />
+            /> */}
+            <ResearchCard
+              specialisation={"RF and Microwave"}
+              description={"Vishal Kumar and Kusum"}
+
+              photo={"Images/logo/RFMF.jpg"}
+              action={"/RF-MW"} />
+
           </Grid>
         </Grid>
         <br />

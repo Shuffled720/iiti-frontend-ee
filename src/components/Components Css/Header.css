@@ -48,6 +48,7 @@ a:hover {
   transform: translateY(0);
   transition-delay: 0s, 0s, 0.5s;
 }
+
 .ani-menu {
   font-size: 0.8rem;
   font-weight: 400;
@@ -57,7 +58,7 @@ a:hover {
   width: 100%;
   background-color: #c6c6c646;
   transform: translateY(-3em);
-  transition: all 0.1s ease 0s, visibility 0.3s linear 0.3s,
+  transition: all 0.1s ease 0.15s, visibility 0.3s linear 0.3s,
     z-index 0s linear 0.01s;
 }
 
@@ -73,7 +74,7 @@ a:hover {
   width: 100%;
   transform: translateY(-3em);
   z-index: 99;
-  transition: all 0.3s ease 0s, visibility 0.3s linear 0.3s;
+  transition: all 0.3s ease 0.15s, visibility 0.3s linear 0.3s;
 }
 
 .aniani-menu-trigger {
@@ -109,6 +110,7 @@ a:hover {
   backdrop-filter: blur(10px);
   z-index: -1;
 }
+
 .link-button {
   padding: 5%;
 }

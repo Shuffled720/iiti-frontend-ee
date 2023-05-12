@@ -11,14 +11,14 @@ const StaffCard = () => {
   const [isError, setIsError] = useState();
   useEffect(() => {
     axios
-      .get(`${api}/people/Faculty/read`)
+      .get(`https://rupal17.pythonanywhere.com/api/people/Faculty/read`)
       .then((response) => setData(response.data))
       .catch((error) => setIsError(error.message));
     if (!isError) {
       setIsError("Not Available");
     }
   }, [isError]);
-
+  console.log(data);
   return (
     <>
       <Container sx={{ display: { xs: "none", md: "block" } }}>
@@ -37,7 +37,7 @@ const StaffCard = () => {
               <Box sx={{ p: 2 }}>
                 <img alt=''
                   width="150"
-                  src={`${image_api}${item.image}`}
+                  src={`https://rupal17.pythonanywhere.com${item.image}`}
                   loading="lazy"
                 />
               </Box>
@@ -82,7 +82,7 @@ const StaffCard = () => {
                 <img alt=''
                   width="110"
                   height="169"
-                  src={`${image_api}${item.image}`}
+                  src={`https://rupal17.pythonanywhere.com${item.image}`}
                   loading="lazy"
                 />
               </Box>
