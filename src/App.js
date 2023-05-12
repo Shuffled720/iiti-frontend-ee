@@ -36,8 +36,7 @@ function App() {
   //     return () => window.removeEventListener("load", handleLoading);
   //   }, []);
   return (
-    <>
-      <>
+    
         <>
           <BrowserRouter>
             <ThemeProvider theme={theme}>
@@ -120,8 +119,7 @@ function App() {
             </ThemeProvider>
           </BrowserRouter>
         </>
-      </>
-    </>
+    
   );
 }
 
