@@ -23,7 +23,7 @@ import ProgramPage from "./pages/ProgramPage";
 import ContactPage from "./pages/ContactPage";
 import ProjectPage from "./pages/ProjectPage";
 import LoadingPage from "./pages/LoadingPage";
-import ResearchPage from "./pages/ResearchPage";
+// import ResearchPage from "./pages/ResearchPage";
 
 function App() {
   // const [isLoading, setIsLoading] = React.useState(true);
