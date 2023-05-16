@@ -19,7 +19,7 @@ export default function DomainPage() {
     if (!isError) {
       setResearch("Not Available");
     }
-  }, [isError]);
+  }, [isError,params.domain]);
   console.log(research.people);
   const a = research.people;
   const b = research.research;
