@@ -17,7 +17,7 @@ export default function LabPage() {
       .catch((error) => setIsError(error.message));
     if (!isError) {
       setLabs("Not Available");
-    } 
+    }
   }, [isError, params.program]);
   return (
     <div>
@@ -36,7 +36,10 @@ export default function LabPage() {
           </Typography>
         </motion.div>
         <Box sx={{ display: "flex", justifyContent: "center" }}>
-          <Box sx={{ borderTop: "7px solid #105297", px: 5 }}>
+          <Box
+            borderColor={"primary.main"}
+            sx={{ borderTop: "7px solid", px: 5 }}
+          >
             <hr />
           </Box>
 

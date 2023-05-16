@@ -42,15 +42,13 @@ const navs = {
     "Research Areas": "/research",
     Projects: "/projects",
     "Recent Publications": {
-      2014: "/research/Recent Publications/2014",
-      2015: "/research/Recent Publications/2015",
-      2016: "/research/Recent Publications/2016",
-      2017: "/research/Recent Publications/2017",
-      2018: "/research/Recent Publications/2018",
-      2019: "/research/Recent Publications/2019",
-      2020: "/research/Recent Publications/2020",
-      2021: "/research/Recent Publications/2021",
-      2022: "/research/Recent Publications/2022",
+      2014: "https://drive.google.com/file/d/11-FnA1ob4pFqLmf6Oxnm5am7EiBfcgBB/view?usp=sharing",
+      2015: "https://drive.google.com/file/d/1petTxLWlLA6UUyrPzigtUqQkTEEyiAo3/view?usp=share_link",
+      2016: "https://drive.google.com/file/d/1v0943WJchHuHnRz165YcrYiCUMuzDJSI/view?usp=share_link",
+      2017: "https://drive.google.com/file/d/1Hk5HSjU-3dX8PJwqs0eJzomGTRtEtOqO/view?usp=share_link",
+      2018: "https://drive.google.com/file/d/1DOTYJUGoaRlMVdumamsFBWBoeA5PHOX7/view?usp=sharing",
+      2019: "https://drive.google.com/file/d/1kvh7ALhO19oXuUyz4G1SvPHc9BcO968z/view?usp=share_link",
+      2020: "https://drive.google.com/file/d/1DTileDvZgFsl-POcNFKNd7itR58JgV15/view?usp=share_link",
     },
     Laboratories: {
       UG: "/labs/ug",
@@ -64,8 +62,10 @@ const navs = {
   },
   Achievements: {
     "Books Published": "/achievements/books",
-    "Faculty Recognition": "/achievements/recognition",
-    "Student Achievements": "/achievements/achieve",
+    "Faculty Recognition":
+      "https://drive.google.com/file/d/1IfYxdM1woJlTH3Nti2uwgbddcoQso_L1/view?usp=sharing",
+    "Student Achievements":
+      "https://drive.google.com/file/d/1WY5bnD2ymFuVvY7ZbOa9Njln5IgfwoUf/view?usp=sharing",
   },
 };
 

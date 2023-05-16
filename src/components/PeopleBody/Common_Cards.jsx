@@ -45,7 +45,7 @@ export default function Common_Cards(props) {
                           {item.image ? (
                             <CardMedia
                               sx={{ height: "150px" }}
-                              image={`${image_api}${item.image}`}
+                              image={`${image_api}${props.program==="BTech"?'/media/':''}${item.image}`}
                               // title="Faculty"
                               loading="lazy"
                             />
@@ -59,7 +59,12 @@ export default function Common_Cards(props) {
                               />
                             </>
                           )}
-                          {/* <CardMedia sx={{ height: 150 }} image={props.photo} title="Staff" /> */}
+                          {/* <CardMedia
+                            sx={{ height: 150 }}
+                            image={props.photo}
+                            title="Staff"
+                          /> */}
+                        {/* yeh extra tha commented part isliye nahi chal rha tha  */}
                           <CardContent>
                             <Typography
                               gutterBottom
@@ -68,9 +73,10 @@ export default function Common_Cards(props) {
                             >
                               {item.name}
                             </Typography>
+                            
                             <Typography
                               variant="body2"
-                              color="text.secondary"
+                              color="black"
                               fontSize={12}
                             >
                               <p>{item.roll_no}</p>

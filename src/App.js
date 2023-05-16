@@ -10,9 +10,7 @@ import { ThemeProvider } from "@mui/material/styles";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Gallery from "./pages/Gallery";
 import LabPage from "./pages/LabPage";
-import Signal from "./pages/Signal";
-import Power from "./pages/Power";
-import Vlsi from "./pages/Vlsi";
+import DomainPage from "./pages/DomainPage";
 import CoursePage from "./pages/CoursePage";
 import FooterWithCounter from "./components/FooterWithCounter";
 import NotFoundPage from "./pages/NotFoundPage";
@@ -25,6 +23,7 @@ import ProgramPage from "./pages/ProgramPage";
 import ContactPage from "./pages/ContactPage";
 import ProjectPage from "./pages/ProjectPage";
 import LoadingPage from "./pages/LoadingPage";
+import ResearchPage from "./pages/ResearchPage";
 
 function App() {
   // const [isLoading, setIsLoading] = React.useState(true);
@@ -62,12 +61,7 @@ function App() {
                   path="/people/:program"
                   element={[<BlackHeader />, <PeoplePage />]}
                 />
-                <Route
-                  path="/signals"
-                  element={[<BlackHeader />, <Signal />]}
-                />
-                <Route path="/vlsi" element={[<BlackHeader />, <Vlsi />]} />
-                <Route path="/power" element={[<BlackHeader />, <Power />]} />
+                <Route path="/research/:domain" element={[<BlackHeader />, <DomainPage />]} />
                 <Route
                   path="/administration"
                   element={[<BlackHeader />, <AdministrationPage />]}

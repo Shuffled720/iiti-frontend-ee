@@ -21,7 +21,7 @@ export default function CoursePage() {
       if (!isError) {
         setIsError("Not Available");
       }
-    }, 3000);
+    });
   }, [param.program, isError]);
   useEffect(() => {
     setTimeout(() => {
@@ -57,7 +57,10 @@ export default function CoursePage() {
             transition={{ duration: 0.3, type: "spring", stiffness: 35 }}
             viewport={{ once: true }}
           >
-            <Box sx={{ borderTop: "7px solid #105297", px: 5 }}>
+            <Box
+              borderColor="red"
+              sx={{ borderTop: "7px solid", px: 5 }}
+            >
               <hr />
             </Box>
           </motion.div>

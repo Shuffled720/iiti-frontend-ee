@@ -14,8 +14,10 @@ import {
   SupervisedUserCircle,
   Timeline,
 } from "@mui/icons-material";
+import cssTheme from "../cssTheme";
 
 const FooterWithCounter = () => {
+  const newTheme = cssTheme();
   return (
     <Box className="Footer-div">
       <Box className="bg-text" sx={{ paddingTop: 3 }}>
@@ -26,7 +28,7 @@ const FooterWithCounter = () => {
         >
           Achievements
           <br />
-          <Typography fontSize={".8rem"}>(from 2014)</Typography>{" "}
+          <Typography fontSize={".8rem"}>(from 2014)</Typography>
         </Typography>
 
         {/* /////////////////////////for large display////////////////////////// */}
@@ -49,7 +51,7 @@ const FooterWithCounter = () => {
               <Link to="people/Faculty">
                 <SupervisedUserCircle
                   color="secondary"
-                  sx={{ fontSize: 40, "&:hover": { color: "#105297" } }}
+                  sx={{ fontSize: 40, "&:hover": { color: newTheme } }}
                 />
               </Link>
               <Typography color="secondary">
@@ -74,7 +76,7 @@ const FooterWithCounter = () => {
               <Link to="stats/Students">
                 <School
                   color="secondary"
-                  sx={{ fontSize: 40, "&:hover": { color: "#105297" } }}
+                  sx={{ fontSize: 40, "&:hover": { color: newTheme } }}
                 />
               </Link>
               <Typography color="secondary">
@@ -100,7 +102,7 @@ const FooterWithCounter = () => {
               <Link to="stats/Publications">
                 <LibraryBooksIcon
                   color="secondary"
-                  sx={{ fontSize: 40, "&:hover": { color: "#105297" } }}
+                  sx={{ fontSize: 40, "&:hover": { color: newTheme } }}
                 />
               </Link>
               <Typography color="secondary">
@@ -126,7 +128,7 @@ const FooterWithCounter = () => {
               <Link to="stats/Placements">
                 <Timeline
                   color="secondary"
-                  sx={{ fontSize: 40, "&:hover": { color: "#105297" } }}
+                  sx={{ fontSize: 40, "&:hover": { color: newTheme } }}
                 />
               </Link>
               <Typography color="secondary">
@@ -152,7 +154,7 @@ const FooterWithCounter = () => {
               <Link to="stats/Patents">
                 <PublicIcon
                   color="secondary"
-                  sx={{ fontSize: 40, "&:hover": { color: "#105297" } }}
+                  sx={{ fontSize: 40, "&:hover": { color: newTheme } }}
                 />
               </Link>
               <Typography color="secondary">
@@ -178,7 +180,7 @@ const FooterWithCounter = () => {
               <Link to="stats/Projects">
                 <ExtensionIcon
                   color="secondary"
-                  sx={{ fontSize: 40, "&:hover": { color: "#105297" } }}
+                  sx={{ fontSize: 40, "&:hover": { color: newTheme } }}
                 />
               </Link>
               <Typography color="secondary">
@@ -204,7 +206,11 @@ const FooterWithCounter = () => {
               <Link to="stats/Grants">
                 <CurrencyRupee
                   color="secondary"
-                  sx={{ fontSize: 40, "&:hover": { color: "#105297" } }}
+                  sx={{
+                    fontSize: 40, "&:hover": {
+                      color: newTheme
+                   }
+                  }}
                 />
               </Link>
               <Typography color="secondary">
@@ -250,7 +256,7 @@ const FooterWithCounter = () => {
                 <Link to="people/Faculty">
                   <SupervisedUserCircle
                     color="secondary"
-                    sx={{ fontSize: 40, "&:hover": { color: "#105297" } }}
+                    sx={{ fontSize: 40, "&:hover": { color: newTheme } }}
                   />
                 </Link>
                 <Typography color="secondary">
@@ -276,7 +282,7 @@ const FooterWithCounter = () => {
                 <Link to="stats/Students">
                   <School
                     color="secondary"
-                    sx={{ fontSize: 40, "&:hover": { color: "#105297" } }}
+                    sx={{ fontSize: 40, "&:hover": { color: newTheme } }}
                   />
                 </Link>
                 <Typography color="secondary">
@@ -303,7 +309,7 @@ const FooterWithCounter = () => {
                 <Link to="stats/Publications">
                   <LibraryBooksIcon
                     color="secondary"
-                    sx={{ fontSize: 40, "&:hover": { color: "#105297" } }}
+                    sx={{ fontSize: 40, "&:hover": { color: newTheme } }}
                   />
                 </Link>
                 <Typography color="secondary">
@@ -330,7 +336,7 @@ const FooterWithCounter = () => {
                 <Link to="stats/Placements">
                   <Timeline
                     color="secondary"
-                    sx={{ fontSize: 40, "&:hover": { color: "#105297" } }}
+                    sx={{ fontSize: 40, "&:hover": { color: newTheme } }}
                   />
                 </Link>
                 <Typography color="secondary">
@@ -357,7 +363,7 @@ const FooterWithCounter = () => {
                 <Link to="stats/Patents">
                   <PublicIcon
                     color="secondary"
-                    sx={{ fontSize: 40, "&:hover": { color: "#105297" } }}
+                    sx={{ fontSize: 40, "&:hover": { color: newTheme } }}
                   />
                 </Link>
                 <Typography color="secondary">
@@ -384,7 +390,7 @@ const FooterWithCounter = () => {
                 <Link to="stats/Projects">
                   <ExtensionIcon
                     color="secondary"
-                    sx={{ fontSize: 40, "&:hover": { color: "#105297" } }}
+                    sx={{ fontSize: 40, "&:hover": { color: newTheme } }}
                   />
                 </Link>
                 <Typography color="secondary">
@@ -411,7 +417,7 @@ const FooterWithCounter = () => {
                 <Link to="stats/Grants">
                   <CurrencyRupee
                     color="secondary"
-                    sx={{ fontSize: 40, "&:hover": { color: "#105297" } }}
+                    sx={{ fontSize: 40, "&:hover": { color: newTheme } }}
                   />
                 </Link>
                 <Typography color="secondary">

@@ -1,28 +1,30 @@
-import React from 'react'
+import React from "react";
 
-
-import "../components/Components Css/ResearchPage.css"
-import { Typography } from '@mui/material'
-import { Link } from 'react-router-dom'
+import "../components/Components Css/ResearchPage.css";
+import { Typography } from "@mui/material";
+import { Link } from "react-router-dom";
 const ResearchCard = (props) => {
-    return (
-        <>
-            <div className="service">
-                <Link to={props.action}>
-                    <div className="icon-holder">
-                        <img className='icon' src={props.photo} alt='' />
-                    </div>
-                    <Typography className="heading" variant='h5'>
-                        {props.specialisation}
-                    </Typography>
-                    <Typography className="description">
-                        {props.description}
-                    </Typography>
+  return (
+    <>
+      <div className="service">
+        <Link to={props.action}>
+          <div className="icon-holder">
+            <img className="icon" src={props.photo} alt="" />
+          </div>
+          <Typography className="heading" variant="h5">
+            {props.specialisation}
+          </Typography>
+          <Typography            
+          className="description"
+            variant="p"
+            fontSize={"0.9rem"}
+          >
+            {props.description}
+          </Typography>
+        </Link>
+      </div>
+    </>
+  );
+};
 
-                </Link>
-            </div>
-        </>
-    )
-}
-
-export default ResearchCard
+export default ResearchCard;

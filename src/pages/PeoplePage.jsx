@@ -34,7 +34,10 @@ export default function BtechPage(props) {
             transition={{ duration: 0.3, type: "spring", stiffness: 35 }}
             viewport={{ once: true }}
           >
-            <Box sx={{ borderTop: "7px solid #105297", px: 5 }}>
+            <Box
+              borderColor={"primary.main"}
+              sx={{ borderTop: "7px solid", px: 5 }}
+            >
               <hr />
             </Box>
           </motion.div>
@@ -172,30 +175,7 @@ export default function BtechPage(props) {
                   photo={"/Images/logo/VLSI.jpg"}
                   rollno={"210002067"}
                   year={"2021"}
-                />
-              </Grid>
-              <Grid item>
-                <CommonCard
-                  name={"Vipul"}
-                  photo={null}
-                  rollno={"210002067"}
-                  year={"2021"}
-                />
-              </Grid>
-              <Grid item>
-                <CommonCard
-                  name={"Vipul"}
-                  photo={null}
-                  rollno={"210002067"}
-                  year={"2021"}
-                />
-              </Grid>
-              <Grid item>
-                <CommonCard
-                  name={"Vipul"}
-                  photo={"/Images/logo/VLSI.jpg"}
-                  rollno={"210002067"}
-                  year={"2021"}
+                  program="MTech"
                 />
               </Grid>
             </Grid>
@@ -228,8 +208,6 @@ export default function BtechPage(props) {
           <></>
         )}
 
-        {/* /////////////////////Alumni////////////////////// */}
-
         {params.program === "Alumni" ? (
           <>
             <br />
@@ -238,8 +216,6 @@ export default function BtechPage(props) {
               justifyContent="left"
               direction="row"
               alignItems="center"
-              // sx={{backgroundImage:"linear-gradient(to top bottom, red, white)"}}
-              // spacing={2}
             >
               <Grid
                 item
@@ -252,8 +228,6 @@ export default function BtechPage(props) {
                 sx={{
                   boxShadow: news === 1 ? "0px 0px 0.5px 0px #010101" : "none",
                 }}
-
-                // background='linear-gradient(to top bottom, red, white)'
               >
                 <button
                   className="news"
@@ -264,9 +238,7 @@ export default function BtechPage(props) {
                     padding: "20px",
                   }}
                 >
-                  {/* <Typography sx={{color: news===1?"primary.main":"black" } }> */}
                   B. Tech
-                  {/* </Typography> */}
                 </button>
               </Grid>
               <Grid
@@ -305,8 +277,6 @@ export default function BtechPage(props) {
                 sx={{
                   boxShadow: news === 3 ? "0px 0px 0.5px 0px #010101" : "none",
                 }}
-
-                // background='linear-gradient(to top bottom, red, white)'
               >
                 <button
                   className="news"
@@ -317,9 +287,7 @@ export default function BtechPage(props) {
                     padding: "20px",
                   }}
                 >
-                  {/* <Typography sx={{color: news===1?"primary.main":"black" } }> */}
                   Ph.D
-                  {/* </Typography> */}
                 </button>
               </Grid>
               <Grid
@@ -333,8 +301,6 @@ export default function BtechPage(props) {
                 sx={{
                   boxShadow: news === 4 ? "0px 0px 0.5px 0px #010101" : "none",
                 }}
-
-                // background='linear-gradient(to top bottom, red, white)'
               >
                 <button
                   className="news"
@@ -345,9 +311,7 @@ export default function BtechPage(props) {
                     padding: "20px",
                   }}
                 >
-                  {/* <Typography sx={{color: news===1?"primary.main":"black" } }> */}
                   MS (Research)
-                  {/* </Typography> */}
                 </button>
               </Grid>
             </Grid>

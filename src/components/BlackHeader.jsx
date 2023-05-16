@@ -7,7 +7,14 @@ import Typography from "@mui/material/Typography";
 
 import navs from "../navdata";
 import NewMobileHeader from "./NewMobileHeader";
+import cssTheme from '../cssTheme'
+
 const BlackHeader = () => {
+  const newTheme=cssTheme();
+  const root = document.documentElement;
+  const myColor = getComputedStyle(root).getPropertyValue("--my-color");
+root.style.setProperty("--my-color", newTheme);
+
   return (
     <>
       {/* <MobileHeader /> */}

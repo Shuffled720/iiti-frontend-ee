@@ -1,9 +1,11 @@
 import { createTheme } from "@mui/material/styles";
+import cssTheme from "./cssTheme";
 
+const newTheme = cssTheme();
 const theme = createTheme({
   palette: {
     primary: {
-      main: "#105297",
+      main: newTheme,
       mainGradient: "linear-gradient(to right, #105297, #fff)",
     },
     secondary: {

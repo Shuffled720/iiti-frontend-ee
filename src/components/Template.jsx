@@ -26,7 +26,10 @@ export default function Template(props) {
             transition={{ duration: 0.3, type: "spring", stiffness: 50 }}
             viewport={{ once: true }}
           >
-            <Box sx={{ borderTop: "7px solid #105297", px: 5 }}>
+            <Box
+              borderColor={"primary.main"}
+              sx={{ borderTop: "7px solid", px: 5 }}
+            >
               <hr />
             </Box>
           </motion.div>
