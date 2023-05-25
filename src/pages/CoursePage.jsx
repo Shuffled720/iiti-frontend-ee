@@ -5,6 +5,8 @@ import { motion } from "framer-motion";
 import { useParams } from "react-router-dom";
 import { api } from "../api";
 import LoadingPage from "./LoadingPage";
+
+import PageTitle from "../components/PageTitle"
 export default function CoursePage() {
   const param = useParams();
   const [data, setData] = useState();
@@ -37,7 +39,9 @@ export default function CoursePage() {
   return (
     <div>
       <Container sx={{ py: 2 }}>
-        <motion.div
+      <PageTitle title="Courses"/>
+
+        {/* <motion.div
           initial={{ opacity: 0, y: 100 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.3, type: "spring", stiffness: 35 }}
@@ -74,7 +78,7 @@ export default function CoursePage() {
               <hr />
             </Box>
           </motion.div>
-        </Box>
+        </Box> */}
         <br />
 
         <Typography variant="h6" color="primary.main" textAlign="center">

@@ -5,6 +5,7 @@ import axios from "axios";
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { api } from "../api";
+import PageTitle from "../components/PageTitle"
 export default function LabPage() {
   const [labs, setLabs] = useState([]);
   const [isError, setIsError] = useState([]);
@@ -22,32 +23,7 @@ export default function LabPage() {
   return (
     <div>
       <Container sx={{ py: 2 }}>
-        <motion.div
-          initial={{ opacity: 0, y: 100 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.3, type: "spring", stiffness: 35 }}
-          viewport={{ once: true }}
-        >
-          <Typography variant="h4" color="primary" textAlign="center">
-            {params.program === "pg" ? "PG" : "UG"} Laboratories
-          </Typography>
-          <Typography variant="h5" color="teritiary" textAlign="center">
-            Department of Electrical Engineering
-          </Typography>
-        </motion.div>
-        <Box sx={{ display: "flex", justifyContent: "center" }}>
-          <Box
-            borderColor={"primary.main"}
-            sx={{ borderTop: "7px solid", px: 5 }}
-          >
-            <hr />
-          </Box>
-
-          <Box sx={{ borderTop: "7px solid black", px: 4 }}>
-            <hr />
-          </Box>
-        </Box>
-
+        <PageTitle title={`${params.program === "ug"?"UG Labs": "PG Labs"}`} />
         <br />
         <br />
         {params.program === "ug" ? (

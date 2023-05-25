@@ -62,10 +62,8 @@ const navs = {
   },
   Achievements: {
     "Books Published": "/achievements/books",
-    "Faculty Recognition":
-      "https://drive.google.com/file/d/1IfYxdM1woJlTH3Nti2uwgbddcoQso_L1/view?usp=sharing",
-    "Student Achievements":
-      "https://drive.google.com/file/d/1WY5bnD2ymFuVvY7ZbOa9Njln5IgfwoUf/view?usp=sharing",
+    "Faculty Recognition":"achievements/faculty",
+    "Student Achievements":"achievements/students",
   },
 };
 

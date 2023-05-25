@@ -3,6 +3,7 @@ import axios from "axios";
 import { Typography, Box } from "@mui/material";
 import { motion } from "framer-motion";
 import { api } from "../api";
+import PageTitle from "../components/PageTitle";
 export default function ProjectPage() {
   const [data, setData] = useState();
   const [isError, setIsError] = useState();
@@ -19,7 +20,9 @@ export default function ProjectPage() {
 
   return (
     <>
-      <motion.div
+
+    <PageTitle title="Projects"/>
+      {/* <motion.div
         initial={{ opacity: 0, y: 100 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.3, type: "spring", stiffness: 35 }}
@@ -57,15 +60,15 @@ export default function ProjectPage() {
           </Box>
           <br />
         </motion.div>
-      </Box>
+      </Box> */}
       <Box>
         <table>
           <tr>
             <th>Title</th>
-            <th align="right">Worker</th>
+            <th align="right">Project Incharge</th>
             <th align="right">Funding</th>
-            <th align="right">duration</th>
-            <th align="right">project_type</th>
+            <th align="right">Duration</th>
+            <th align="right">Source</th>
           </tr>
 
           {data?.map((item, key) => (

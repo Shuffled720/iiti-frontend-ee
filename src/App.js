@@ -26,94 +26,75 @@ import LoadingPage from "./pages/LoadingPage";
 // import ResearchPage from "./pages/ResearchPage";
 
 function App() {
-  // const [isLoading, setIsLoading] = React.useState(true);
-  // const handleLoading = () => {
-  //   setIsLoading(false);
-  //   };
-  //   useEffect(() => {
-  //     window.addEventListener("load", handleLoading);
-  //     return () => window.removeEventListener("load", handleLoading);
-  //   }, []);
   return (
-    
-        <>
-          <BrowserRouter>
-            <ThemeProvider theme={theme}>
-              <Routes>
-                <Route path="/" element={[<Header />, <HomePage />]} />
-                <Route
-                  path="/about"
-                  element={[<BlackHeader />, <AboutUsPage />]}
-                />
-                <Route
-                  path="/research"
-                  element={[<BlackHeader />, <Research />]}
-                />
-                <Route
-                  path="/labs/:program"
-                  element={[<BlackHeader />, <LabPage />]}
-                />
-                <Route
-                  path="/people/:program/:year"
-                  element={[<BlackHeader />, <PeoplePage />]}
-                />
-                <Route
-                  path="/people/:program"
-                  element={[<BlackHeader />, <PeoplePage />]}
-                />
-                <Route path="/research/:domain" element={[<BlackHeader />, <DomainPage />]} />
-                <Route
-                  path="/administration"
-                  element={[<BlackHeader />, <AdministrationPage />]}
-                />
-                <Route
-                  path="/contact"
-                  element={[<BlackHeader />, <ContactPage />]}
-                />
-                <Route
-                  path="/gallery"
-                  element={[<BlackHeader />, <Gallery />]}
-                />
-                <Route
-                  path="/courses/:program"
-                  element={[<BlackHeader />, <CoursePage />]}
-                />
-                <Route
-                  path="/achievements/books"
-                  element={[<BlackHeader />, <BooksPage />]}
-                />
-                {/* <Route
+    <>
+      <BrowserRouter>
+        <ThemeProvider theme={theme}>
+          <Routes>
+            <Route path="/" element={[<Header />, <HomePage />]} />
+            <Route path="/about" element={[<BlackHeader />, <AboutUsPage />]} />
+            <Route path="/research" element={[<BlackHeader />, <Research />]} />
+            <Route
+              path="/labs/:program"
+              element={[<BlackHeader />, <LabPage />]}
+            />
+            <Route
+              path="/people/:program/:year"
+              element={[<BlackHeader />, <PeoplePage />]}
+            />
+            <Route
+              path="/people/:program"
+              element={[<BlackHeader />, <PeoplePage />]}
+            />
+            <Route
+              path="/research/:domain"
+              element={[<BlackHeader />, <DomainPage />]}
+            />
+            <Route
+              path="/administration"
+              element={[<BlackHeader />, <AdministrationPage />]}
+            />
+            <Route
+              path="/contact"
+              element={[<BlackHeader />, <ContactPage />]}
+            />
+            <Route path="/gallery" element={[<BlackHeader />, <Gallery />]} />
+            <Route
+              path="/courses/:program"
+              element={[<BlackHeader />, <CoursePage />]}
+            />
+            <Route
+              path="/achievements/:achievement"
+              element={[<BlackHeader />, <BooksPage />]}
+            />
+            {/* <Route
               path="/research/paper/:year"
               element={[<BlackHeader />, <PaperPage />]}
             /> */}
-                <Route
-                  path="/stats/:params"
-                  element={[<BlackHeader />, <StatsPage />]}
-                />
-                <Route
-                  path="/courses/:program"
-                  element={[<BlackHeader />, <CoursePage />]}
-                />
-                <Route
-                  path="/research/programs"
-                  element={[<BlackHeader />, <ProgramPage />]}
-                />
-                <Route
-                  path="/projects"
-                  element={[<BlackHeader />, <ProjectPage />]}
-                />
-                <Route path="*" element={[<BlackHeader />, <NotFoundPage />]} />
-                <Route
-                  path="/load"
-                  element={[<BlackHeader />, <LoadingPage />]}
-                />
-                <Route path="*" element={[<BlackHeader />, <NotFoundPage />]} />
-              </Routes>
-              <FooterWithCounter />
-            </ThemeProvider>
-          </BrowserRouter>
-        </>
-    
+            <Route
+              path="/stats/:params"
+              element={[<BlackHeader />, <StatsPage />]}
+            />
+            <Route
+              path="/courses/:program"
+              element={[<BlackHeader />, <CoursePage />]}
+            />
+            <Route
+              path="/research/programs"
+              element={[<BlackHeader />, <ProgramPage />]}
+            />
+            <Route
+              path="/projects"
+              element={[<BlackHeader />, <ProjectPage />]}
+            />
+            <Route path="*" element={[<BlackHeader />, <NotFoundPage />]} />
+            <Route path="/load" element={[<BlackHeader />, <LoadingPage />]} />
+            <Route path="*" element={[<BlackHeader />, <NotFoundPage />]} />
+          </Routes>
+          <FooterWithCounter />
+        </ThemeProvider>
+      </BrowserRouter>
+    </>
   );
 }
 

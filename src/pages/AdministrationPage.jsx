@@ -4,12 +4,14 @@ import { motion } from "framer-motion";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
+import PageTitle from "../components/PageTitle";
 
 export default function AdministrationPage() {
   return (
     <div>
       <Container sx={{ py: 2 }}>
-        <motion.div
+        <PageTitle title="Administration" />
+        {/* <motion.div
           initial={{ opacity: 0, y: 100 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.3, type: "spring", stiffness: 35 }}
@@ -48,7 +50,7 @@ export default function AdministrationPage() {
           </motion.div>
         </Box>
         <br />
-        <br />
+        <br /> */}
 
         <Grid
           container

@@ -5,6 +5,7 @@ import StaffCard from "../components/PeopleBody/Staff_Card";
 import CommonCard from "../components/PeopleBody/Common_Cards";
 import { useParams } from "react-router-dom";
 import Carousel from "../components/Carousel";
+import PageTitle from "../components/PageTitle"
 
 export default function BtechPage(props) {
   const params = useParams();
@@ -14,7 +15,8 @@ export default function BtechPage(props) {
   return (
     <div>
       <Container sx={{ py: 2 }}>
-        <motion.div
+        <PageTitle title="People"/>
+        {/* <motion.div
           initial={{ opacity: 0, y: 100 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.3, type: "spring", stiffness: 35 }}
@@ -51,7 +53,7 @@ export default function BtechPage(props) {
               <hr />
             </Box>
           </motion.div>
-        </Box>
+        </Box> */}
         <Typography
           variant="h5"
           color="primary"
@@ -81,14 +83,12 @@ export default function BtechPage(props) {
         {params.program === "Faculty" ? (
           <>
             {/* <img src="/Images/Carousel/1.JPG" /> */}
-            <Carousel page="people" program="Faculty" />
+            {/* <Carousel page="people" program="Faculty" /> */}
             <Grid
               container
               justifyContent={"space-around"}
               alignItems={"center"}
               direction={"column"}
-              spacing={6}
-              sx={{ pt: 4 }}
             >
               <Grid item>
                 <StaffCard />
@@ -100,14 +100,12 @@ export default function BtechPage(props) {
         )}
         {params.program === "Staff" ? (
           <>
-            <Carousel page="people" program="Staff" />
+            {/* <Carousel page="people" program="Staff" /> */}
             <Grid
               container
               justifyContent={"space-around"}
               alignItems={"center"}
               direction={"row"}
-              spacing={6}
-              sx={{ pt: 4 }}
             >
               <Grid item>
                 <CommonCard year={""} program={params.program} />
@@ -121,7 +119,7 @@ export default function BtechPage(props) {
         {params.program === "BTech" ? (
           <>
             {console.log(typeof params.year)}
-            {params.year === "2022" ? (
+            {/* {params.year === "2022" ? (
               <Carousel page="people" program="BTech" year="2022" />
             ) : (
               <></>
@@ -140,14 +138,12 @@ export default function BtechPage(props) {
               <Carousel page="people" program="BTech" year="2019" />
             ) : (
               <></>
-            )}
+            )} */}
             <Grid
               container
               justifyContent={"space-around"}
               alignItems={"center"}
               direction={"row"}
-              spacing={6}
-              sx={{ pt: 4 }}
             >
               <Grid item>
                 <CommonCard year={params.year} program={params.program} />
@@ -160,14 +156,12 @@ export default function BtechPage(props) {
 
         {params.program === "MTech" ? (
           <>
-            <img alt="" src="/Images/mtech25.JPG"></img>
+            {/* <img alt="" src="/Images/mtech25.JPG"></img> */}
             <Grid
               container
               justifyContent={"space-around"}
               alignItems={"center"}
               direction={"row"}
-              spacing={6}
-              sx={{ pt: 4 }}
             >
               <Grid item>
                 <CommonCard
@@ -191,8 +185,6 @@ export default function BtechPage(props) {
               justifyContent={"space-around"}
               alignItems={"center"}
               direction={"row"}
-              spacing={6}
-              sx={{ pt: 4 }}
             >
               <Grid item>
                 <CommonCard

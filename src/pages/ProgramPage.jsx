@@ -1,13 +1,15 @@
 import React from "react";
 import { Typography, Box, Container } from "@mui/material";
 import { motion } from "framer-motion";
+import PageTitle from "../components/PageTitle"
 
 export default function ProgramPage() {
   return (
     <div>
       <>
         <Container sx={{ py: 2 }}>
-          <motion.div
+          <PageTitle title="Programs"/>
+          {/* <motion.div
             initial={{ opacity: 0, y: 100 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.3, type: "spring", stiffness: 35 }}
@@ -46,7 +48,7 @@ export default function ProgramPage() {
             </motion.div>
           </Box>
           <br />
-          <br />
+          <br /> */}
           <Typography
             variant="h5"
             color="primary.main"

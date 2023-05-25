@@ -3,12 +3,14 @@ import { Box, Container, Grid } from "@mui/material";
 import { motion } from "framer-motion";
 import Typography from "@mui/material/Typography";
 import ResearchCard from "./ResearchCard";
+import PageTitle from "../components/PageTitle"
 
 export default function ResearchPage() {
   return (
     <div>
       <Container sx={{ py: 2 }}>
-        <motion.div
+        <PageTitle title="Research Areas"/>
+        {/* <motion.div
           initial={{ opacity: 0, y: 100 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.3, type: "spring", stiffness: 35 }}
@@ -45,7 +47,7 @@ export default function ResearchPage() {
               <hr />
             </Box>
           </motion.div>
-        </Box>
+        </Box> */}
 
         <Grid
           container

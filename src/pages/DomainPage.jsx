@@ -6,6 +6,8 @@ import { Divider } from "@mui/material";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { api } from "../api";
+import PageTitle from "../components/PageTitle"
+
 export default function DomainPage() {
   const params = useParams();
   console.log(params.domain);

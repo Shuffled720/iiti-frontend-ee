@@ -7,6 +7,7 @@
   box-sizing: border-box;
   text-decoration: none;
   list-style: none;
+  font-family: "Quicksand", sans-serif;
 }
 
 .carousel-text {
@@ -28,7 +29,6 @@
 /* /////////////////////////Counter//////////////////////////// */
 .Counter-div {
   background-image: url(/public/Images/bg.jpg);
-
   background-position: 100%;
 }
 
@@ -41,7 +41,6 @@
   background-image: url(/public/Images/bg.jpg);
   background-position: 100%;
   background-size: cover;
-
 }
 
 /* //////////////////////////////Table//////////////////////////////// */
@@ -67,7 +66,13 @@ th {
   padding: 0.5%;
 }
 
-
-.cladsssss{
-  color: #04531a
+.about-bg {
+  background-image: url(/public/Images/about_bg.jpg);
+  background-position: 10%;
+  background-size: cover;
+  font-weight: 700;
+}
+.about-backdrop {
+  backdrop-filter: blur(7px);
+  padding: 7% 2%;
 }

@@ -21,7 +21,7 @@ const NewHeader = () => {
               <div>
                 <Typography variant="h5" color={"white"} padding={5}>
                   Indian Institute Of Technology Indore
-                  <br /> Department Of Electrical Engineering
+                  <br /> Department of Electrical Engineering
                 </Typography>
               </div>
             </Link>

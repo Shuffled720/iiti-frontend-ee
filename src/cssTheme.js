@@ -12,7 +12,7 @@ const cssTheme = () => {
     // console.log(date);
   let weekno = getWeekOfMonth(date);
     // console.log(weekno);
-    const themeMain = list[weekno];
+    const themeMain = list[2];
   return themeMain;
 };
 

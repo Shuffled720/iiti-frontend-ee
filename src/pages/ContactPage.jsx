@@ -2,11 +2,14 @@ import React from "react";
 import { Typography, Box, Container } from "@mui/material";
 import { motion } from "framer-motion";
 
+import PageTitle from"../components/PageTitle";
+
 export default function Contact() {
   return (
     <div>
       <Container sx={{ py: 2 }}>
-        <motion.div
+        <PageTitle title="Contact Us"/>
+        {/* <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.3, type: "spring", stiffness: 50 }}
@@ -43,7 +46,7 @@ export default function Contact() {
           </motion.div>
         </Box>
 
-        <br />
+        <br /> */}
         <Box
           sx={{
             display: { xs: "block", md: "flex" },

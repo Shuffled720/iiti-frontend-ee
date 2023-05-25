@@ -2,6 +2,8 @@ import React from "react";
 import { Typography, Box, Container } from "@mui/material";
 import { motion } from "framer-motion";
 import { useParams } from "react-router-dom";
+import PageTitle from "../components/PageTitle"
+
 export default function StatsPage() {
   const param = useParams();
   console.log(param);
@@ -9,7 +11,8 @@ export default function StatsPage() {
     <div>
       <>
         <Container sx={{ py: 2 }}>
-          <motion.div
+          <PageTitle title="Statistics"/>
+          {/* <motion.div
             initial={{ opacity: 0, y: 100 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.3, type: "spring", stiffness: 35 }}
@@ -46,8 +49,7 @@ export default function StatsPage() {
                 <hr />
               </Box>
             </motion.div>
-          </Box>
-          <br />
+          </Box> */}
           <center>
             {param.params === "Faculty" ? (
               <>

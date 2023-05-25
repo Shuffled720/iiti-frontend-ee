@@ -157,7 +157,15 @@ export default function Events() {
                       <Typography fontSize={12} mb={1}>
                         {nitem.description}
                       </Typography>
-                      {nitem.image?<img src={`${image_api}${nitem.image}`} alt="not found" width={"20%"} />:<></>}
+                      {nitem.image ? (
+                        <img
+                          src={`${image_api}${nitem.image}`}
+                          alt="not found"
+                          width={"20%"}
+                        />
+                      ) : (
+                        <></>
+                      )}
                       <br />
                       <hr color="rgb(50,50,50,.1)" />
                     </>
@@ -188,7 +196,9 @@ export default function Events() {
           </Grid>
           <br />
           <br />
-          <span className="capitalize text-4xl font-bold">Events</span>
+          <Typography variant="h4" fontWeight="600">
+            Events
+          </Typography>
           <br />
           <br />
 
