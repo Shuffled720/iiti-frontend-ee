@@ -1,14 +1,34 @@
 :root {
   --my-color: red;
 }
+
 * {
   padding: 0%;
   margin: 0%;
   box-sizing: border-box;
   text-decoration: none;
   list-style: none;
-  font-family: "Quicksand", sans-serif;
+  text-decoration: none;
+  /* font-family: 'DM Sans', sans-serif; */
+  /* font-family: 'Dancing Script', cursive; */
 }
+
+.section-1-bg {
+  background-image: url(/public/bgv_5.jpg);
+  background-size: 100%;
+  height: 100vh;
+
+}
+
+/* h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-family: 'Dancing Script', cursive;
+} */
 
 .carousel-text {
   position: absolute;
@@ -38,7 +58,7 @@
 }
 
 .Footer-div {
-  background-image: url(/public/Images/bg.jpg);
+  background-image: url(/public/bgv_3.jpg);
   background-position: 100%;
   background-size: cover;
 }
@@ -56,23 +76,80 @@ table {
   text-align: center;
   margin: auto;
 }
+
 td {
   width: 10%;
   padding: 1%;
 }
+
 th {
   background-color: var(--my-color);
   color: #fff;
   padding: 0.5%;
 }
 
-.about-bg {
+/* .about-bg {
   background-image: url(/public/Images/about_bg.jpg);
   background-position: 10%;
   background-size: cover;
   font-weight: 700;
 }
+
 .about-backdrop {
   backdrop-filter: blur(7px);
   padding: 7% 2%;
+} */
+
+
+.theme-color {
+  color: #3262c2;
+
 }
+
+adsf {
+  color: #e9eef8;
+
+  color: #bfdfdf;
+}
+
+.about-bg {
+  backdrop-filter: blur(2px);
+  background-image: url('/public/bgv_3.jpg');
+  background-size: 300%;
+  background-position: 100%;
+  /* background-position: -50%, -50%; */
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+
+.theme-color1 {
+  color: #fed612;
+
+}
+
+.theme-color2 {
+  color: #e94100;
+
+}
+
+.theme-color3 {
+  color: #d8283d;
+
+}
+
+.theme-color4 {
+  color: #0093af;
+
+}
+
+.theme-color5 {
+  color: #fed612;
+}
+
+
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */

@@ -172,7 +172,7 @@ export default function DomainPage() {
             </Typography>
             <Container>
               {a?.map((item, i) => (
-                <Typography fontSize={14}>{item}</Typography>
+                <Typography variant="p" fontSize={14}>{item}</Typography>
               ))}
             </Container>
           </Container>

@@ -77,7 +77,7 @@ export default function AdministrationPage() {
                     title="HOD"
                   />
                   <CardContent>
-                    <Typography gutterBottom component="div" fontSize={12}>
+                    <Typography variant="h6 "gutterBottom component="div" fontSize={12}>
                       Dr. Vivek Kanhangad
                     </Typography>
                     <Typography
@@ -115,7 +115,7 @@ export default function AdministrationPage() {
                       title="Staff"
                     />
                     <CardContent>
-                      <Typography gutterBottom component="div" fontSize={12}>
+                      <Typography  variant="h6"gutterBottom component="div" fontSize={12}>
                         Ms. Sakshi Jain
                       </Typography>
                       <Typography

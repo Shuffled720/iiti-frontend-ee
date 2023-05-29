@@ -10,17 +10,17 @@ import NewMobileHeader from "./NewMobileHeader";
 import cssTheme from '../cssTheme'
 
 const BlackHeader = () => {
-  const newTheme=cssTheme();
+  const newTheme = cssTheme();
   const root = document.documentElement;
   // const myColor = getComputedStyle(root).getPropertyValue("--my-color");
-root.style.setProperty("--my-color", newTheme);
+  root.style.setProperty("--my-color", newTheme);
 
   return (
     <>
       {/* <MobileHeader /> */}
       <NewMobileHeader />
       {/* /////////////////////////////////////////////////// */}
-      <Box sx={{ display: { xs: "none", md: "block" } , backgroundColor:"black" , color:"white"}}>
+      <Box sx={{ display: { xs: "none", md: "block" }, color: "white" }}>
         <div className="black-navdiv">
           <nav className="black-naviiii">
             <div className="black-logo-text">
@@ -28,12 +28,12 @@ root.style.setProperty("--my-color", newTheme);
                 <img
                   src="/Images/logo/blue_logo.png"
                   alt="logo_png"
-                  width="100px"
+                  width="70px"
                 ></img>
               </Link>
               <Link to="/">
                 <div>
-                  <Typography variant="h5" color={"black"} padding={5}>
+                  <Typography variant="h1" fontSize='0.7rem' color={"black"} padding={1}>
                     Indian Institute of Technology Indore
                     <br /> Department of Electrical Engineering
                   </Typography>
@@ -43,12 +43,12 @@ root.style.setProperty("--my-color", newTheme);
             <div className="black-menu-wrapper">
               <ul className="black-nav-links">
                 <li className="black-menu">
-                  <Link to="/">Home</Link>
+                  <Link to="/"><Typography variant="p">Home</Typography></Link>
                 </li>
                 {Object.keys(navs).map((key, i) => (
                   <>
                     <li className="black-menu">
-                      <Link to="#">{key}</Link>
+                      <Link to="#"><Typography variant="p">{key}</Typography></Link>
                       {typeof navs[key] === "object" ? (
                         <>
                           <ul className="black-ani-menu">
@@ -58,7 +58,7 @@ root.style.setProperty("--my-color", newTheme);
                                   <>
                                     <li className="black-aniani-menu-trigger">
                                       <div className="black-link-button">
-                                        <Link to="#">{key2}</Link>
+                                        <Link to="#"><Typography variant="p">{key2}</Typography></Link>
                                         <ul className="black-aniani-menu">
                                           {Object.keys(navs[key][key2]).map(
                                             (key3, i3) => (
@@ -66,7 +66,9 @@ root.style.setProperty("--my-color", newTheme);
                                                 <li>
                                                   <div className="black-link-button">
                                                     <Link to={navs[key][key2][key3]}>
-                                                      {key3}
+                                                      <Typography varient='p'>
+                                                        {key3}
+                                                      </Typography>
                                                     </Link>
                                                   </div>
                                                 </li>
@@ -81,7 +83,7 @@ root.style.setProperty("--my-color", newTheme);
                                   <>
                                     <li>
                                       <div className="black-link-button">
-                                        <Link to={navs[key][key2]}>{key2}</Link>
+                                        <Link to={navs[key][key2]}><Typography varient='p'>{key2}</Typography></Link>
                                       </div>
                                     </li>
                                   </>

@@ -48,18 +48,18 @@ const StaffCard = () => {
                     {item.name}
                   </a>
                 </Typography>
-                <Typography variant="h7">{item.title}</Typography>
+                <Typography variant="p">{item.title}</Typography>
 
-                <Typography fontWeight="600">Research Interest:</Typography>
+                <Typography  variant="p" fontWeight="600">Research Interest:</Typography>
                 <Box>
-                  <Typography fontSize="0.8rem">{item.details}</Typography>
+                  <Typography variant="p" fontSize="0.8rem">{item.details}</Typography>
                 </Box>
               </Box>
               <Box sx={{ p: 2, width: "40%" }}>
-                <Typography fontSize="0.8rem">
+                <Typography  variant="p"  fontSize="0.8rem">
                   Email: <a href={`mailto:${item.email}`}>{item.email}</a>
                 </Typography>
-                <Typography fontSize="0.8rem">
+                <Typography variant="p" fontSize="0.8rem">
                   Address:{item.address}
                 </Typography>
               </Box>
@@ -94,18 +94,18 @@ const StaffCard = () => {
                 <Typography variant="h5" color="primary">
                   <a href={`${item.link}`}>{item.name}</a>
                 </Typography>
-                <Typography variant="h7">{item.title}</Typography>
+                <Typography variant="p">{item.title}</Typography>
 
-                <Typography fontWeight="600">Research Interest:</Typography>
+                <Typography variant="p" fontWeight="600">Research Interest:</Typography>
                 <Box>
-                  <Typography fontSize="0.8rem">{item.details}</Typography>
+                  <Typography variant="p" fontSize="0.8rem">{item.details}</Typography>
                 </Box>
               </Box>
               <Box>
-                <Typography fontSize="0.8rem">
+                <Typography variant="p" fontSize="0.8rem">
                   Email: <a href={`mailto:${item.email}`}>{item.email}</a>
                 </Typography>
-                <Typography fontSize="0.8rem">
+                <Typography variant="p" fontSize="0.8rem">
                   Address:{item.address}
                 </Typography>
               </Box>

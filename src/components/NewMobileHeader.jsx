@@ -192,11 +192,11 @@ const NewMobileHeader = () => {
           </Link>
           <Link to={"/"}>
             <Box sx={{ px: 1 }}>
-              <Typography fontSize="0.8rem" fontWeight="600" color="black">
+              <Typography variant="h4" fontSize="0.8rem" fontWeight="600" color="black">
                 Department Of Electical Engineering
                 <br />
               </Typography>
-              <Typography fontSize="0.6rem" fontWeight="600" color="black">
+              <Typography variant="h5" fontSize="0.6rem" fontWeight="600" color="black">
                 Indian Institute Of Technology Indore
               </Typography>
             </Box>

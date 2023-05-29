@@ -19,8 +19,8 @@ const NewHeader = () => {
             </Link>
             <Link to="/">
               <div>
-                <Typography variant="h5" color={"white"} padding={5}>
-                  Indian Institute Of Technology Indore
+                <Typography variant='h5' fontSize='1.7rem' color={"white"} padding={5}>
+                  Indian Institute of Technology Indore
                   <br /> Department of Electrical Engineering
                 </Typography>
               </div>
@@ -29,12 +29,12 @@ const NewHeader = () => {
           <div className="menu-wrapper">
             <ul className="nav-links">
               <li className="menu">
-                <Link to="/">Home</Link>
+                <Link to="/"><Typography varient='p'>Home</Typography></Link>
               </li>
               {Object.keys(navs).map((key, i) => (
                 <>
                   <li className="menu">
-                    <Link to="#">{key}</Link>
+                    <Link to="#"><Typography varient='p' >{key}</Typography></Link>
                     {typeof navs[key] === "object" ? (
                       <>
                         <ul className="ani-menu">
@@ -44,7 +44,7 @@ const NewHeader = () => {
                                 <>
                                   <li className="aniani-menu-trigger">
                                     <div className="link-button">
-                                      <Link to="#">{key2}</Link>
+                                      <Link to="#"><Typography varient='p' >{key2}</Typography></Link>
                                       <ul className="aniani-menu">
                                         {Object.keys(navs[key][key2]).map(
                                           (key3, i3) => (
@@ -54,7 +54,7 @@ const NewHeader = () => {
                                                   <Link
                                                     to={navs[key][key2][key3]}
                                                   >
-                                                    {key3}
+                                                    <Typography varient='p' >{key3}</Typography>
                                                   </Link>
                                                 </div>
                                               </li>
@@ -69,7 +69,7 @@ const NewHeader = () => {
                                 <>
                                   <li>
                                     <div className="link-button">
-                                      <Link to={navs[key][key2]}>{key2}</Link>
+                                      <Link to={navs[key][key2]}><Typography varient='p'>{key2}</Typography></Link>
                                     </div>
                                   </li>
                                 </>

@@ -91,7 +91,7 @@ export default function CoursePage() {
                 <>
                   {[1, 2, 3, 4, 5, 6, 7, 8].map((first, i) => (
                     <>
-                      <Typography textAlign="center" fontWeight="bold">
+                      <Typography variant="h4" textAlign="center" fontWeight="bold">
                         Semester: {first}
                       </Typography>
 
@@ -116,7 +116,7 @@ export default function CoursePage() {
                     </>
                   ))}
 
-                  <Typography textAlign="center" fontWeight="bold">
+                  <Typography variant="h4"  textAlign="center" fontWeight="bold">
                     Electives
                   </Typography>
 
@@ -140,7 +140,7 @@ export default function CoursePage() {
                 <>
                   {[1, 2, 3, 4].map((first, i) => (
                     <>
-                      <Typography textAlign="center" fontWeight="bold">
+                      <Typography  variant="h4"  textAlign="center" fontWeight="bold">
                         Semester: {first}
                       </Typography>
 
@@ -164,7 +164,7 @@ export default function CoursePage() {
                       <br />
                     </>
                   ))}
-                  <Typography textAlign="center" fontWeight="bold">
+                  <Typography variant="h4"  textAlign="center" fontWeight="bold">
                     Electives
                   </Typography>
 

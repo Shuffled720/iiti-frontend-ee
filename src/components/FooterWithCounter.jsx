@@ -28,7 +28,7 @@ const FooterWithCounter = () => {
         >
           Achievements
           <br />
-          <Typography fontSize={".8rem"}>(from 2014)</Typography>
+          <Typography variant="h5" fontSize={".8rem"}>(from 2014)</Typography>
         </Typography>
 
         {/* /////////////////////////for large display////////////////////////// */}
@@ -54,7 +54,7 @@ const FooterWithCounter = () => {
                   sx={{ fontSize: 40, "&:hover": { color: newTheme } }}
                 />
               </Link>
-              <Typography color="secondary">
+              <Typography variant="p" color="secondary">
                 <CountUp end={18} duration={2}>
                   {({ countUpRef, start }) => (
                     <VisibilitySensor onChange={start} delayedCall>
@@ -63,7 +63,7 @@ const FooterWithCounter = () => {
                   )}
                 </CountUp>
               </Typography>
-              <Typography color="secondary">Faculty</Typography>
+              <Typography variant="p" color="secondary">Faculty</Typography>
             </Box>
             <Box
               sx={{
@@ -79,7 +79,7 @@ const FooterWithCounter = () => {
                   sx={{ fontSize: 40, "&:hover": { color: newTheme } }}
                 />
               </Link>
-              <Typography color="secondary">
+              <Typography variant="p" color="secondary">
                 <CountUp end={515} duration={2}>
                   {({ countUpRef, start }) => (
                     <VisibilitySensor onChange={start} delayedCall>
@@ -89,7 +89,7 @@ const FooterWithCounter = () => {
                 </CountUp>
                 +
               </Typography>
-              <Typography color="secondary">Students Graduated</Typography>
+              <Typography variant="p" color="secondary">Students Graduated</Typography>
             </Box>
             <Box
               sx={{
@@ -105,7 +105,7 @@ const FooterWithCounter = () => {
                   sx={{ fontSize: 40, "&:hover": { color: newTheme } }}
                 />
               </Link>
-              <Typography color="secondary">
+              <Typography variant="p" color="secondary">
                 <CountUp end={1358} duration={2}>
                   {({ countUpRef, start }) => (
                     <VisibilitySensor onChange={start} delayedCall>
@@ -115,7 +115,7 @@ const FooterWithCounter = () => {
                 </CountUp>
                 +
               </Typography>
-              <Typography color="secondary">Publications</Typography>
+              <Typography variant="p" color="secondary">Publications</Typography>
             </Box>
             <Box
               sx={{
@@ -131,7 +131,7 @@ const FooterWithCounter = () => {
                   sx={{ fontSize: 40, "&:hover": { color: newTheme } }}
                 />
               </Link>
-              <Typography color="secondary">
+              <Typography variant="p" color="secondary">
                 <CountUp end={96} duration={2}>
                   {({ countUpRef, start }) => (
                     <VisibilitySensor onChange={start} delayedCall>
@@ -141,7 +141,7 @@ const FooterWithCounter = () => {
                 </CountUp>
                 %
               </Typography>
-              <Typography color="secondary">Placement</Typography>
+              <Typography variant="p" color="secondary">Placement</Typography>
             </Box>
             <Box
               sx={{
@@ -157,7 +157,7 @@ const FooterWithCounter = () => {
                   sx={{ fontSize: 40, "&:hover": { color: newTheme } }}
                 />
               </Link>
-              <Typography color="secondary">
+              <Typography variant="p" color="secondary">
                 <CountUp end={19} duration={2}>
                   {({ countUpRef, start }) => (
                     <VisibilitySensor onChange={start} delayedCall>
@@ -167,7 +167,7 @@ const FooterWithCounter = () => {
                 </CountUp>
                 +
               </Typography>
-              <Typography color="secondary">Patents</Typography>
+              <Typography variant="p" color="secondary">Patents</Typography>
             </Box>
             <Box
               sx={{
@@ -183,7 +183,7 @@ const FooterWithCounter = () => {
                   sx={{ fontSize: 40, "&:hover": { color: newTheme } }}
                 />
               </Link>
-              <Typography color="secondary">
+              <Typography variant="p" color="secondary">
                 <CountUp end={95} duration={2}>
                   {({ countUpRef, start }) => (
                     <VisibilitySensor onChange={start} delayedCall>
@@ -193,7 +193,7 @@ const FooterWithCounter = () => {
                 </CountUp>
                 +
               </Typography>
-              <Typography color="secondary">Projects</Typography>
+              <Typography variant="p" color="secondary">Projects</Typography>
             </Box>
             <Box
               sx={{
@@ -209,11 +209,11 @@ const FooterWithCounter = () => {
                   sx={{
                     fontSize: 40, "&:hover": {
                       color: newTheme
-                   }
+                    }
                   }}
                 />
               </Link>
-              <Typography color="secondary">
+              <Typography variant="p" color="secondary">
                 <CountUp end={32} duration={2}>
                   {({ countUpRef, start }) => (
                     <VisibilitySensor onChange={start} delayedCall>
@@ -223,7 +223,7 @@ const FooterWithCounter = () => {
                 </CountUp>
                 .7+ Cr
               </Typography>
-              <Typography color="secondary">Project Grants</Typography>
+              <Typography variant="p" color="secondary">Project Grants</Typography>
             </Box>
           </Box>
         </motion.div>
@@ -259,7 +259,7 @@ const FooterWithCounter = () => {
                     sx={{ fontSize: 40, "&:hover": { color: newTheme } }}
                   />
                 </Link>
-                <Typography color="secondary">
+                <Typography variant="p" color="secondary">
                   <CountUp end={18} duration={2}>
                     {({ countUpRef, start }) => (
                       <VisibilitySensor onChange={start} delayedCall>
@@ -268,7 +268,7 @@ const FooterWithCounter = () => {
                     )}
                   </CountUp>
                 </Typography>
-                <Typography color="secondary">Faculty</Typography>
+                <Typography variant="p" color="secondary">Faculty</Typography>
               </Box>
               <Box
                 sx={{
@@ -285,7 +285,7 @@ const FooterWithCounter = () => {
                     sx={{ fontSize: 40, "&:hover": { color: newTheme } }}
                   />
                 </Link>
-                <Typography color="secondary">
+                <Typography variant="p" color="secondary">
                   <CountUp end={515} duration={2}>
                     {({ countUpRef, start }) => (
                       <VisibilitySensor onChange={start} delayedCall>
@@ -295,7 +295,7 @@ const FooterWithCounter = () => {
                   </CountUp>
                   +
                 </Typography>
-                <Typography color="secondary">Students Graduated</Typography>
+                <Typography variant="p" color="secondary">Students Graduated</Typography>
               </Box>
               <Box
                 sx={{
@@ -312,7 +312,7 @@ const FooterWithCounter = () => {
                     sx={{ fontSize: 40, "&:hover": { color: newTheme } }}
                   />
                 </Link>
-                <Typography color="secondary">
+                <Typography variant="p" color="secondary">
                   <CountUp end={1358} duration={2}>
                     {({ countUpRef, start }) => (
                       <VisibilitySensor onChange={start} delayedCall>
@@ -322,7 +322,7 @@ const FooterWithCounter = () => {
                   </CountUp>
                   +
                 </Typography>
-                <Typography color="secondary">Publications</Typography>
+                <Typography variant="p" color="secondary">Publications</Typography>
               </Box>
               <Box
                 sx={{
@@ -339,7 +339,7 @@ const FooterWithCounter = () => {
                     sx={{ fontSize: 40, "&:hover": { color: newTheme } }}
                   />
                 </Link>
-                <Typography color="secondary">
+                <Typography variant="p" color="secondary">
                   <CountUp end={96} duration={2}>
                     {({ countUpRef, start }) => (
                       <VisibilitySensor onChange={start} delayedCall>
@@ -349,7 +349,7 @@ const FooterWithCounter = () => {
                   </CountUp>
                   %
                 </Typography>
-                <Typography color="secondary">Placement</Typography>
+                <Typography variant="p" color="secondary">Placement</Typography>
               </Box>
               <Box
                 sx={{
@@ -366,7 +366,7 @@ const FooterWithCounter = () => {
                     sx={{ fontSize: 40, "&:hover": { color: newTheme } }}
                   />
                 </Link>
-                <Typography color="secondary">
+                <Typography variant="p" color="secondary">
                   <CountUp end={19} duration={2}>
                     {({ countUpRef, start }) => (
                       <VisibilitySensor onChange={start} delayedCall>
@@ -376,7 +376,7 @@ const FooterWithCounter = () => {
                   </CountUp>
                   +
                 </Typography>
-                <Typography color="secondary">Patents</Typography>
+                <Typography variant="p" color="secondary">Patents</Typography>
               </Box>
               <Box
                 sx={{
@@ -393,7 +393,7 @@ const FooterWithCounter = () => {
                     sx={{ fontSize: 40, "&:hover": { color: newTheme } }}
                   />
                 </Link>
-                <Typography color="secondary">
+                <Typography variant="p" color="secondary">
                   <CountUp end={95} duration={2}>
                     {({ countUpRef, start }) => (
                       <VisibilitySensor onChange={start} delayedCall>
@@ -403,7 +403,7 @@ const FooterWithCounter = () => {
                   </CountUp>
                   +
                 </Typography>
-                <Typography color="secondary">Projects</Typography>
+                <Typography variant="p" color="secondary">Projects</Typography>
               </Box>
               <Box
                 sx={{
@@ -420,7 +420,7 @@ const FooterWithCounter = () => {
                     sx={{ fontSize: 40, "&:hover": { color: newTheme } }}
                   />
                 </Link>
-                <Typography color="secondary">
+                <Typography variant="p" color="secondary">
                   <CountUp end={32} duration={2}>
                     {({ countUpRef, start }) => (
                       <VisibilitySensor onChange={start} delayedCall>
@@ -430,7 +430,7 @@ const FooterWithCounter = () => {
                   </CountUp>
                   .7+ Cr
                 </Typography>
-                <Typography color="secondary">Project Grants</Typography>
+                <Typography variant="p" color="secondary">Project Grants</Typography>
               </Box>
               {/* <Box
                 sx={{
@@ -492,7 +492,7 @@ const FooterWithCounter = () => {
                   <Typography variant="h5" sx={{ color: "primary.main" }}>
                     IIT Indore Department of Electrical
                   </Typography>
-                  <Typography variant="body2" sx={{ color: "secondary.main" }}>
+                  <Typography variant="p" sx={{ color: "secondary.main" }}>
                     Contact: Head, Electrical Engineering Scandium Building,
                     Academic POD Indian Institute of Technology Indore Khandwa
                     Road, Simrol Indore, Madhya Pradesh, India 453552 Email:
@@ -540,7 +540,7 @@ const FooterWithCounter = () => {
                             Administration
                           </Typography>
                         </Link>
-                        
+
                         <Link to="/contact">
                           <Typography
                             fontSize="0.7rem"
@@ -834,11 +834,12 @@ const FooterWithCounter = () => {
         <Box
           sx={{
             backgroundColor: "#1e1e1e",
+            width: "100%",
+            padding: 'auto'
           }}
         >
-          <Typography color="secondary" textAlign="center" sx={{ p: 2 }}>
-            ©️Department of Electrical Engineering, IIT Indore - All Rights
-            Reserved
+          <Typography variant="p" color="secondary" textAlign="center" sx={{ pt: 2, m: 'auto' }}>
+            ©️Department of Electrical Engineering, IIT Indore - All Rights Reserved
           </Typography>
         </Box>
       </Box>

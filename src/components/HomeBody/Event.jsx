@@ -2,19 +2,19 @@ import React from "react";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
-import { Grid } from "@mui/material";
+import { Grid, Box } from "@mui/material";
 import CardMedia from "@mui/material/CardMedia";
-import {  image_api } from "../../api";
+import { image_api } from "../../api";
 export default function Event(props) {
   return (
-    <div>
+    <Box  >
       <Card
         sx={{
           minWidth: 300,
           // borderRight: 3,
           // borderTop: 3,
           borderRadius: 0,
-          borderColor: "primary.main",
+          // borderColor: "primary.main",
         }}
         elevation={1}
       >
@@ -116,6 +116,6 @@ export default function Event(props) {
           </Button>
         </CardActions> */}
       </Card>
-    </div>
+    </Box >
   );
 }

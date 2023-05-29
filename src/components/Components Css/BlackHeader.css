@@ -9,26 +9,36 @@
   position: relative;
   color: #fff;
   width: 100%;
-}
-
-a:hover {
-  color: #000;
-}
-
-.black-menu-wrapper {
-  padding: 1%;
-  background-color: var(--my-color);
+  display: flex;
+  justify-content: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.814);
 }
 
 .black-logo-text {
-  padding: 0% 5%;
+  padding: 0% 0% 0% 2%;
+  width: 15%;
   display: flex;
   align-items: center;
   background-color: white;
 }
 
+.black-menu-wrapper {
+  width: 85%;
+  /* background-color:"white"; */
+  background-color: var(--my-color);
+}
+
+
+
+a:hover {
+  color: #000;
+}
+
+
 .black-nav-links {
+  height: 100%;
   display: flex;
+  align-items: center;
   justify-content: space-around;
 }
 
@@ -55,6 +65,7 @@ a:hover {
   transform: translateY(0);
   transition-delay: 0s, 0s, 0.5s;
 }
+
 .black-ani-menu {
   font-size: 0.8rem;
   font-weight: 400;
@@ -117,6 +128,7 @@ a:hover {
   backdrop-filter: blur(10px);
   z-index: -1;
 }
+
 .black-link-button {
   padding: 5%;
 }

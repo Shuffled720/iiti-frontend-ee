@@ -26,15 +26,14 @@ const BooksPage = () => {
     <>
       <Container sx={{ py: 2 }}>
         <PageTitle
-          title={`${
-            params.achievement === "books"
-              ? "Books Published"
-              : params.achievement === "students"
+          title={`${params.achievement === "books"
+            ? "Books Published"
+            : params.achievement === "students"
               ? "Students Achievement"
               : params.achievement === "faculty"
-              ? "Faculty Achievement"
-              : ""
-          }`}
+                ? "Faculty Achievement"
+                : ""
+            }`}
         />
         <br />
         {data?.map((item, key) => (
@@ -67,36 +66,69 @@ const BooksPage = () => {
                   spacing={2}
                 >
                   <Grid item>
-                    <Typography mt={1} color={"primary.main"} fontWeight={600}>
+                    <Typography variant="h6" mt={1} color={"primary.main"} fontWeight={600}>
                       {item.name}
                     </Typography>
                   </Grid>
                   <Grid item>
-                    <Typography mt={1} color={"primary.main"} fontWeight={600}>
+                    <Typography variant="p" mt={1} color={"primary.main"} fontWeight={600}>
                       {item.roll_no}
                     </Typography>
                   </Grid>
                   <Grid item>
-                    <Typography fontSize={14} color="gray">
+                    <Typography variant="p" fontSize={14} color="gray">
                       {item.year}
                     </Typography>
                   </Grid>
                 </Grid>
-                <Typography fontSize={12} mb={1}>
+                <Typography variant="p" fontSize={12} mb={1}>
                   {item.author}
                 </Typography>
                 <br />
-                <Typography fontSize={12} mb={1}>
+                <Typography variant="p" fontSize={12} mb={1}>
                   {item.publication}
                 </Typography>
               </Grid>
             </Grid>
-            <Typography color={"primary.main"} >
+            <Typography variant="p" color={"primary.main"} >
               {item.award}
             </Typography>
             <hr color="rgb(50,50,50,.1)" />
           </>
         ))}
+
+        <Grid item>
+          {/* <Grid
+            container
+            justifyContent="space-between"
+            direction="row"
+            alignItems="center"
+            spacing={2}
+          >
+            <Grid item>
+              <Typography variant="h6" mt={1} color={"primary.main"} fontWeight={600}>
+                item.name
+              </Typography>
+            </Grid>
+            <Grid item>
+              <Typography variant="p" mt={1} color={"primary.main"} fontWeight={600}>
+                item.roll_no
+              </Typography>
+            </Grid>
+            <Grid item>
+              <Typography variant="p" fontSize={14} color="gray">
+                item.year
+              </Typography>
+            </Grid>
+          </Grid>
+          <Typography variant="p" fontSize={12} mb={1}>
+            item.author
+          </Typography>
+          <br />
+          <Typography variant="p" fontSize={12} mb={1}>
+            item.publication
+          </Typography> */}
+        </Grid>
       </Container>
     </>
   );

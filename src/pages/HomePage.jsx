@@ -7,6 +7,9 @@ import { Box } from "@mui/material";
 const HomePage = (props) => {
   return (
     <>
+
+
+
       <Box sx={{ display: { xs: "block", md: "none" } }}>
         <Carousel page="home" program="" />
       </Box>
@@ -14,6 +17,8 @@ const HomePage = (props) => {
         <NewCarousel />
       </Box>
       <Body />
+
+
     </>
   );
 };
